@@ -1,0 +1,66 @@
+@import "mixins"
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) and (max-width : 479ыpx)
+    #header
+        min-height: 100vh
+        h1
+            line-height: 42px
+            font-size: 42px
+        h2
+            font-size: 24px
+        nav
+            margin-top: 15px
+    #header .header-logo
+        padding-left: 50px
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) and (max-width : 767px)
+    #header
+        min-height: 100vh
+        h1
+            line-height: 52px
+            font-size: 52px
+        h2
+            font-size: 28px
+        nav
+            margin-top: 15px
+    #header .header-logo
+        padding-left: 50px
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width : 991px)
+    #header
+        min-height: 100vh
+        h1
+            line-height: 64px
+            font-size: 64px
+        h2
+            font-size: 32px
+        nav
+            margin-top: 15px
+    #header .header-logo
+        padding-left: 50px
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width : 1199px)
+    #header
+        h1
+            line-height: 100px
+            font-size: 100px
+        h2
+            font-size: 48px
+        min-height: 100vh
+        background-position:  50% 0%
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+    #header
+        h1
+            line-height: 100px
+            font-size: 100px
+        h2
+            font-size: 48px
+        min-height: 100vh
+        background-position:  50% 0%

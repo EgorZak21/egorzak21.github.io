@@ -1,0 +1,105 @@
+@import "media","mixins"
+@font-face
+    font-family: "MyPro"
+    src: url("../fonts/MyriadPro-Regular.otf") format("truetype") 
+    font-style: normal
+    font-weight: normal
+
+.fa
+    font-size: 30px
+#header
+    nav
+        a
+           
+            &:hover
+                span
+                    opacity: 1
+                text-decoration: none
+                border-bottom: 3px solid $orange
+                color: $orange
+            padding-top: 15px
+            width: 90%
+            height: 50px
+            margin: auto
+        &-p1
+            width: 90%
+            height: 50px
+            margin: auto
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+    background-image: url("../img/header_bg.jpg")
+    padding-top: 5vh
+    color: white
+    background-repeat: no-repeat
+    h2
+        margin-top: 100px
+        margin-bottom: 30px
+        text-align: center
+    h1
+        text-align: center
+a,
+a:visited,
+a:active
+    color: white
+body
+    font-family: "MyPro"
+.header
+    &-nav-line span
+        height: 3px
+        width: 20px
+        position: absolute
+        bottom: 0
+        left: 0
+    &-btn
+        margin-top: 80px
+        margin-bottom: 50px
+        height: 60px
+        width: 200px
+        border: solid white 4px
+        background-color: transparent
+        font-size: 22px
+        color: white
+        position: relative
+        &-line
+            top: 0
+            right: 0
+            height: 4px
+            width: 100px
+            background-color: white
+            color: white
+            position: absolute
+            transform: translateX(-47px)
+            margin-top: -50px
+    &-logo
+        font-size: 30px
+    &-nav2
+        &-point
+            &-progress
+                top: 0
+                left: 10px
+                height: 3px
+                width: 90%
+                background-color: white
+                color: white
+                position: absolute
+                margin-top: 10px
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: flex-end
+            height: 50px
+            font-size: 24px
+        &-h
+            font-size: 18px
+.pr1
+    z-index: 100
+    top: 0
+    left: 10px
+    height: 3px
+    width: 30%
+    background-color: $red
+    color: $red
+    position: absolute
+    margin-top: 10px
