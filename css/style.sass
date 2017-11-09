@@ -41,8 +41,20 @@
         text-align: center
 a,
 a:visited,
-a:active
+a:active,
+a:hover
     color: white
+    text-decoration: none 
+a:hover
+    border-bottom: 3px solid white
+    color: white
+.hover
+    div
+        &:hover
+            span
+                text-decoration: none
+                border-bottom: 3px solid $orange
+                color: $orange
 body
     font-family: "MyPro"
 .header
@@ -75,10 +87,20 @@ body
     &-logo
         font-size: 30px
     &-nav2
+        &-text
+            a:hover
+                text-decoration: none
         &-point
+            a
+                &:hover
+                    span
+                        text-decoration: none
+                        border-bottom: 3px solid $orange
+                        color: $orange
+            padding: 0px
             &-progress
                 top: 0
-                left: 10px
+                left: 16px
                 height: 3px
                 width: 90%
                 background-color: white
@@ -90,13 +112,10 @@ body
             justify-content: flex-start
             align-items: flex-end
             height: 50px
-            font-size: 24px
-        &-h
-            font-size: 18px
 .pr1
     z-index: 100
     top: 0
-    left: 10px
+    left: 16px
     height: 3px
     width: 30%
     background-color: $red

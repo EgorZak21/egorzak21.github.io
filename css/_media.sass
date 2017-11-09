@@ -3,7 +3,7 @@
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) and (max-width : 479ыpx)
+@media only screen and (min-width : 320px) and (max-width : 479px)
     #header
         min-height: 100vh
         h1
@@ -15,7 +15,13 @@
             margin-top: 15px
     #header .header-logo
         padding-left: 50px
-
+    .head
+        &-nav2
+            &-point
+                opacity: 0
+                font-size: 8px
+            &-h
+                font-size: 8px
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width : 767px)
     #header
@@ -29,6 +35,13 @@
             margin-top: 15px
     #header .header-logo
         padding-left: 50px
+    .head
+        &-nav2
+            &-point
+                opacity: 0
+                font-size: 8px
+            &-h
+                font-size: 8px
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width : 991px)
@@ -43,6 +56,12 @@
             margin-top: 15px
     #header .header-logo
         padding-left: 50px
+    .head
+        &-nav2
+            &-point
+                font-size: 24px
+            &-h
+                font-size: 18px
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width : 1199px)
@@ -54,6 +73,12 @@
             font-size: 48px
         min-height: 100vh
         background-position:  50% 0%
+    .head
+        &-nav2
+            &-point
+                font-size: 24px
+            &-h
+                font-size: 18px
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
     #header
@@ -64,3 +89,9 @@
             font-size: 48px
         min-height: 100vh
         background-position:  50% 0%
+    .head
+        &-nav2
+            &-point
+                font-size: 24px
+            &-h
+                font-size: 18px
