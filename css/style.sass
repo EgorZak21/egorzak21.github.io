@@ -5,12 +5,17 @@
     font-style: normal
     font-weight: normal
 
-.fa
-    font-size: 30px
+.rel
+    position: relative
+button
+    outline:none
+button:focus
+    outline: none
 #header
     nav
         a
-           
+            flex-grow: 1
+            flex-shrink: 1
             &:hover
                 span
                     opacity: 1
@@ -18,11 +23,6 @@
                 border-bottom: 3px solid $orange
                 color: $orange
             padding-top: 15px
-            width: 90%
-            height: 50px
-            margin: auto
-        &-p1
-            width: 90%
             height: 50px
             margin: auto
         display: flex
@@ -46,7 +46,6 @@ a:hover
     color: white
     text-decoration: none 
 a:hover
-    border-bottom: 3px solid white
     color: white
 .hover
     div
@@ -58,12 +57,44 @@ a:hover
 body
     font-family: "MyPro"
 .header
-    &-nav-line span
-        height: 3px
-        width: 20px
+    &-search
+        display: none
+        input
+            border-radius: 5px
+            border: white solid 3px
+            background-color: transparent
+            outline: none
+            color: white
+            font-size: 21px
+            &:focus
+                border: white solid 3px
+                outline: none
+                color: white
+        &-btn1,
+        &-btn2
+            i
+                vertical-align: middle
+                text-align: center 
+                display: block
+            position: absolute
+            background-color: transparent
+            border: none
+            top: 3px
+            right: 3px
+            color: white
         position: absolute
-        bottom: 0
-        left: 0
+        height: 50px
+        top: 0
+        &-form
+            width: 100%
+            display: block
+            position: absolute
+            height: 30px
+    &-nav
+        &-p1
+            opacity: 1
+            width: 90%
+            height: 100%
     &-btn
         margin-top: 80px
         margin-bottom: 50px
@@ -100,7 +131,7 @@ body
             padding: 0px
             &-progress
                 top: 0
-                left: 16px
+                left: 5px
                 height: 3px
                 width: 90%
                 background-color: white
@@ -112,10 +143,127 @@ body
             justify-content: flex-start
             align-items: flex-end
             height: 50px
+.section
+    &-header
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        h6
+            margin-top: 70px
+            font-family: 'Kaushan Script', cursive
+            font-size: 30px
+            color: $grey2
+        h2
+            margin-top: 15px
+            font-family: 'Montserrat', sans-serif
+            font-size: 38px
+            color: $grey2
+        span
+            margin-top: 25px
+            width: 150px
+            height: 4px
+            background-color: $red
+            color: $red
+        p
+            margin-top: 40px
+            font-size: 15px
+            margin-bottom: 70px
+            color: $grey
+
+.wedo
+    &-imgd
+        margin-bottom: 40px
+        background-color: $blue
+        max-width: 350px
+        max-height: 260px
+        width: 25vw
+        height: 17vw
+        position: relative
+        &-grad
+            background: linear-gradient(#db7474, #e3cc7c)
+            i
+                position: absolute
+                color: white
+                font-size: 60px
+                opacity: 0
+                z-index: 900
+                margin-top: -20px
+                transition-duration: 0.5s
+            h5
+                position: absolute
+                font-size: 28px
+                color: white
+                font-family: 'Montserrat', sans-serif
+                opacity: 0
+                z-index: 900
+                display: block
+                text-align: center
+                margin-top: 35px
+                transition-duration: 0.5s
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            bottom: 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            img
+                z-index: 0
+                position: absolute
+                top: 0
+                bottom: 0
+                opacity: 1
+                width: 100%
+                height: 100%
+                transition-duration: 1s
+            transition-duration: 1s
+            &:hover
+                i,
+                h5
+                    transition-duration: 1s
+                    opacity: 1
+                img
+                    transition-duration: 1s
+                    opacity: 0.1
+                margin-top: -10px
+                margin-left: -10px
 .pr1
     z-index: 100
     top: 0
-    left: 16px
+    left: 5px
+    height: 3px
+    width: 30%
+    background-color: $red
+    color: $red
+    position: absolute
+    margin-top: 10px
+.pr2
+    z-index: 100
+    top: 0
+    left: 5px
+    height: 3px
+    width: 30%
+    background-color: $red
+    color: $red
+    position: absolute
+    margin-top: 10px
+.pr3
+    z-index: 100
+    top: 0
+    left: 5px
+    height: 3px
+    width: 20%
+    background-color: $red
+    color: $red
+    position: absolute
+    margin-top: 10px
+.pr4
+    z-index: 100
+    top: 0
+    left: 5px
     height: 3px
     width: 30%
     background-color: $red
