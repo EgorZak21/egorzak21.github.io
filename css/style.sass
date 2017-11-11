@@ -161,6 +161,7 @@ body
             color: $grey2
         span
             margin-top: 25px
+            margin-bottom: 10px
             width: 150px
             height: 4px
             background-color: $red
@@ -175,31 +176,23 @@ body
     &-imgd
         margin-bottom: 40px
         background-color: $blue
-        max-width: 350px
-        max-height: 260px
-        width: 25vw
-        height: 17vw
         position: relative
         &-grad
             background: linear-gradient(#db7474, #e3cc7c)
             i
                 position: absolute
                 color: white
-                font-size: 60px
                 opacity: 0
                 z-index: 900
-                margin-top: -20px
                 transition-duration: 0.5s
             h5
                 position: absolute
-                font-size: 28px
                 color: white
                 font-family: 'Montserrat', sans-serif
                 opacity: 0
                 z-index: 900
                 display: block
                 text-align: center
-                margin-top: 35px
                 transition-duration: 0.5s
             position: absolute
             width: 100%
@@ -230,6 +223,30 @@ body
                     opacity: 0.1
                 margin-top: -10px
                 margin-left: -10px
+#wedo2
+    background-color: $blue
+    color: white
+    font-family: 'Montserrat', sans-serif
+.wedo2
+    &-cont
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: center
+    &-item
+        border-right: 1px $blue2 solid
+        border-left: 1px $blue2 solid
+        text-align: center
+
+.with
+    &-box
+        h6
+            font-size: 14px
+            font-family: 'Montserrat', sans-serif
+        p
+            font-size: 14px
+            color: $grey
+        border-bottom: 2px $grey3 solid
 .pr1
     z-index: 100
     top: 0

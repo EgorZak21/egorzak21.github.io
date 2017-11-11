@@ -1,6 +1,6 @@
 /*==========  Mobile First  ========== */
 /* Custom, iPhone Retina */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   #header {
     min-height: 100vh; }
     #header nav a div {
@@ -34,9 +34,35 @@
     .header-search-btn2 {
       margin-right: 3px; }
     .header-search-form {
-      padding: 15px; } }
+      padding: 15px; }
+
+  .wedo-imgd {
+    width: 100%;
+    padding-top: 66%; }
+    .wedo-imgd-grad i {
+      font-size: 1rem;
+      margin-top: -13%; }
+    .wedo-imgd-grad h5 {
+      font-size: 0.5rem;
+      margin-top: 10px; }
+
+  .wedo2-cont {
+    padding: 0 5%; }
+
+  .wedo2-item {
+    width: 30%;
+    padding: 2% 0; }
+
+  #wedo2 h3 {
+    font-size: 40px; }
+  #wedo2 p {
+    font-size: 14px; }
+
+  .with-box {
+    margin: 10px 0px;
+    padding: 0px 20px; } }
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   #header {
     min-height: 100vh; }
     #header nav a div {
@@ -70,7 +96,38 @@
     .header-search-btn2 {
       margin-right: 3px; }
     .header-search-form {
-      padding: 20px; } }
+      padding: 20px; }
+
+  .wedo-imgd {
+    width: 110%;
+    padding-top: 73%; }
+    .wedo-imgd-grad i {
+      font-size: 30px;
+      margin-top: -20px; }
+    .wedo-imgd-grad h5 {
+      font-size: 15px;
+      margin-top: 20px; }
+
+  .wedo .col-4 .wedo-imgd {
+    width: 100%;
+    padding-top: 66%; }
+
+  .wedo2-cont {
+    padding: 0 10%; }
+
+  .wedo2-item {
+    width: 19%;
+    padding: 2% 0; }
+
+  #wedo2 h3 {
+    font-size: 40px; }
+  #wedo2 p {
+    font-size: 10px; }
+
+  .with-box {
+    min-height: 146px;
+    margin: 10px 0px;
+    padding: 0px 20px; } }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #header {
@@ -106,7 +163,34 @@
     .header-search-btn2 {
       margin-right: 3px; }
     .header-search-form {
-      padding: 20px; } }
+      padding: 20px; }
+
+  .wedo-imgd {
+    width: 105%;
+    padding-top: 70%; }
+    .wedo-imgd-grad i {
+      font-size: 40px;
+      margin-top: -30px; }
+    .wedo-imgd-grad h5 {
+      font-size: 20px;
+      margin-top: 25px; }
+
+  .wedo2-cont {
+    padding: 0 10%; }
+
+  .wedo2-item {
+    width: 19%;
+    padding: 2% 0; }
+
+  #wedo2 h3 {
+    font-size: 40px; }
+  #wedo2 p {
+    font-size: 14px; }
+
+  .with-box {
+    min-height: 146px;
+    margin: 20px 0px;
+    padding: 0px 15px; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #header {
@@ -141,7 +225,33 @@
   .header-nav2-point {
     font-size: 24px; }
   .header-nav2-h {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .wedo-imgd {
+    width: 100%;
+    padding-top: 66%; }
+    .wedo-imgd-grad i {
+      font-size: 60px;
+      margin-top: -30px; }
+    .wedo-imgd-grad h5 {
+      font-size: 28px;
+      margin-top: 35px; }
+
+  .wedo2-cont {
+    padding: 0 10%; }
+
+  .wedo2-item {
+    width: 19%;
+    padding: 3% 0; }
+
+  #wedo2 h3 {
+    font-size: 72px; }
+  #wedo2 p {
+    font-size: 20x; }
+
+  .with-box {
+    margin: 30px 0px;
+    padding: 0px 10px; } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   #header {
@@ -171,7 +281,33 @@
     .header-search-btn2 {
       margin-right: 3px; }
     .header-search-form {
-      padding: 15px; } }
+      padding: 15px; }
+
+  .wedo-imgd {
+    width: 90%;
+    padding-top: 60%; }
+    .wedo-imgd-grad i {
+      font-size: 60px;
+      margin-top: -30px; }
+    .wedo-imgd-grad h5 {
+      font-size: 28px;
+      margin-top: 35px; }
+
+  .wedo2-cont {
+    padding: 0 10%; }
+
+  .wedo2-item {
+    width: 19%;
+    padding: 5% 0; }
+
+  #wedo2 h3 {
+    font-size: 72px; }
+  #wedo2 p {
+    font-size: 20px; }
+
+  .with-box {
+    margin: 30px 0px;
+    padding: 0px 10px; } }
 @font-face {
   font-family: "MyPro";
   src: url("../fonts/MyriadPro-Regular.otf") format("truetype");
@@ -328,6 +464,7 @@ body {
     color: #333333; }
   .section-header span {
     margin-top: 25px;
+    margin-bottom: 10px;
     width: 150px;
     height: 4px;
     background-color: #f38181;
@@ -341,10 +478,6 @@ body {
 .wedo-imgd {
   margin-bottom: 40px;
   background-color: #95e1d3;
-  max-width: 350px;
-  max-height: 260px;
-  width: 25vw;
-  height: 17vw;
   position: relative; }
   .wedo-imgd-grad {
     background: linear-gradient(#db7474, #e3cc7c);
@@ -361,21 +494,17 @@ body {
     .wedo-imgd-grad i {
       position: absolute;
       color: white;
-      font-size: 60px;
       opacity: 0;
       z-index: 900;
-      margin-top: -20px;
       transition-duration: 0.5s; }
     .wedo-imgd-grad h5 {
       position: absolute;
-      font-size: 28px;
       color: white;
       font-family: "Montserrat", sans-serif;
       opacity: 0;
       z-index: 900;
       display: block;
       text-align: center;
-      margin-top: 35px;
       transition-duration: 0.5s; }
     .wedo-imgd-grad img {
       z-index: 0;
@@ -396,6 +525,30 @@ body {
       .wedo-imgd-grad:hover img {
         transition-duration: 1s;
         opacity: 0.1; }
+
+#wedo2 {
+  background-color: #95e1d3;
+  color: white;
+  font-family: "Montserrat", sans-serif; }
+
+.wedo2-cont {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center; }
+.wedo2-item {
+  border-right: 1px #b5eae0 solid;
+  border-left: 1px #b5eae0 solid;
+  text-align: center; }
+
+.with-box {
+  border-bottom: 2px #e5e5e5 solid; }
+  .with-box h6 {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif; }
+  .with-box p {
+    font-size: 14px;
+    color: #BBB; }
 
 .pr1 {
   z-index: 100;
