@@ -1,0 +1,221 @@
+@import "media","mixins"
+button
+    outline: none
+button:focus
+    outline: none
+
+body
+    font-family: 'Montserrat', sans-serif
+    background-image: url(../img/body-bg.png)
+    background-color: $mainblue
+    background-repeat: repeat-y
+    background-size: 100%
+#header
+    h1
+        margin-top: 15vh
+        color: white
+        font-weight: 700
+        font-size: 72px
+    p
+        margin-top: 7vh
+        color: white
+        font-weight: 400i
+        font-size: 20px
+#nav
+    margin-top: 10vh
+    .nav-bar
+        position: relative
+        display: flex
+        flex-direction: row
+        justify-content: center
+        button
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            .fa
+                display: inline-block
+                font-size: 17px
+                margin-right: 7px
+            margin: 0 30px
+            background: rgba(36, 81, 196, 0.5)
+            border-top: 3px solid rgba(255, 255 , 255 , 0.2)
+            border-bottom: 3px solid rgba(255, 255 , 255 , 0.2)
+            color: white
+            border-left: none
+            border-right: none
+            font-weight: 400i
+            font-size: 30px
+            padding: 5px 10px
+
+#app
+    margin-bottom: 150px    
+    .main
+        h3
+            color: $revers1
+            margin-bottom: 10px
+            font-weight: 400i
+            font-size: 30px
+        background-color: white
+        padding: 5vh
+        &-display
+            margin: auto
+            width: 95%
+            height: 80vh
+            border: solid 3px $grey1
+        &-set
+            &-box
+                form
+                    display: flex
+                    flex-direction: column
+                    align-items: space-between
+                h5
+                    margin-left: 20px
+                    color: $orange
+                    font-size: 1.5em
+            h4
+                padding: 5px 10%
+                color: $blue4
+            &-tab
+            &-tabli
+                background-color: #fff
+                margin-top: -4px
+                width: 100%
+                min-height: 50px
+                color: $bluet
+                border-right: none
+                border-left: none
+                border-top: 4px solid $blue3
+                border-bottom: 4px solid $blue3
+                
+            &-tabul
+                h4
+                    margin-top: 20px
+                    margin-bottom: 20px
+                    color: $blue4
+                position: relative
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+            h3
+                margin-top: 30px
+.build
+    margin-right: 35px
+    position: absolute
+    bottom: 0
+    right: 0
+    font-weight: 600
+    font-size: 28px
+    min-width: 30%
+    padding: 10px 20px
+    color: white
+    border: none
+    background-color: $blue4 !important
+.active
+    z-index: 100
+    border: 3px solid $revers1 !important
+.rcl
+    width: 20%
+    height: 40px
+    border: 8px solid tranparent
+    &:nth-child(1)
+        background-color: #111
+    &:nth-child(2)
+        background-color: #fff
+    &:nth-child(3)
+        background-color: #3f3
+    &:nth-child(4)
+        background-color: #44f
+.rcl
+    margin-top: 10px
+.radio-cl
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 0 5px
+    label
+        width: 100%
+        height: 40px
+        border: 5px solid $grey1
+    input
+        &:checked+label
+            border: 5px solid #FFDE40
+        display: none
+.args
+    input[type=text]
+        text-align: center
+        color: $grey2 !important
+        &:active
+            outline: none
+        width: 60px
+        height: 30px
+        margin: 3px 5px
+        padding: 0 3px
+        border-top: 3px solid $blue3
+        border-left: none
+        border-right: none
+        border-bottom: 3px solid $blue3
+    font-size: 20px
+    color: $revers1
+    margin-left: 20%
+
+.formular
+    color: $grey3
+    margin-left: 20%
+    font-size: 27px
+    .between
+        margin: 0 0.3em
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    .drob
+        font-size: 0.85em
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        span
+            width: 100%
+            height: 2px
+            background-color: $grey3
+            color: $grey3
+
+#info
+    margin-top: 80px
+.info
+    &-tab
+        background-color: #fff
+        h4
+            font-size: 30px
+            color: $blue2
+            margin: 40px auto
+
+footer
+    .row
+        .col-6
+            a
+                padding: 5px
+                color: white
+                display: block
+                border-bottom: 3px solid #274E7D
+                border-top: 3px solid #274E7D
+                &:active
+                    color: white
+                    text-decoration: none
+                &:hover
+                    color: white
+                    text-decoration: none
+                    border-bottom: 3px solid $revers1
+                    border-top: 3px solid $revers1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+    color: white 
+    font-size: 20px
+    padding: 20px
+    margin-top: 50px
+    background-color: #274E7D
+

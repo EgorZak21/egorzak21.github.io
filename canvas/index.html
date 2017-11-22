@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Кривые второго порядка</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+  </head>
+  <body>
+    <section id="header">
+        <div class="container text-center">
+            <h1>Кривые второго <br> порядка</h1>
+            <p>Онлайн приложение для постоения кривых<br> второго порядка,прямых и графиков функций</p>
+        </div>
+    </section>
+    <section id="nav">
+        <div class="container">
+            <div class="nav-bar">
+                <button>
+                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                   
+                    Масштаб
+                </button>
+                <button>
+                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    Очистить
+                </button>
+                <button>
+                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    Руководство
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="app">
+        <div class="container">
+            <div class="main">
+               <h3 class="text-center">Область построения</h3>
+                <div class="main-display"></div>
+                <div class="main-set">
+                    <h3 class="text-center">Введите параметры:</h3>
+                    <div class="wrap row">
+                        <div class="col-lg-4 col-12 main-set-tabul">
+                           <h4>График:</h4>
+                            <button class="active main-set-tabli">Каноническая гипербола</button>
+                            <button class="main-set-tabli">Каноническая парабола</button>
+                            <button class="main-set-tabli">Эллипс</button>
+                            <button class="main-set-tabli">Окружность</button>
+                            <button class="main-set-tabli">Прямая в общем виде</button>
+                            <button class="main-set-tabli">График линейной функции</button>
+                            <button class="main-set-tabli">График функции обратной пропорциональности</button>
+                            <button class="main-set-tabli">График квадратичной функции</button>
+                        </div>
+                        <div class="tab-rel col-lg-8 col-12">
+                          <h4 class="text-center">Установите коэффициенты и дополнительные параметры</h4>
+                            <div data-tab="tab0" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="drob">
+                                           <div>(x-x<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               a<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">-</div>
+                                       <div class="drob">
+                                           <div>(y-y<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               b<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">=1</div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">x<sub>1</sub>=<input class="cg" type="text"> y<sub>1</sub>=<input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">  a= <input type="text"> b= <input type="text"></div>
+                                       </div>
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                           <div data-tab="tab1" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">
+                                           (y-y<sub>1</sub>)<sup>2</sup>=p(x-x<sub>1</sub>)
+                                       </div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">x<sub>1</sub>=<input class="cg" type="text"> y<sub>1</sub>=<input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12"> p= <input type="text"></div>
+                                       </div>
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl21" type="radio" name="clr" value="#"><label for="cl21" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl22" type="radio" name="clr" value="#"><label for="cl22" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl23" type="radio" name="clr" value="#"><label for="cl23" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl24" type="radio" name="clr" value="#"><label for="cl24" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                           </div>
+                            <div data-tab="tab2" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="drob">
+                                           <div>(x-x<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               a<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">+</div>
+                                       <div class="drob">
+                                           <div>(y-y<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               b<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">=1</div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">x<sub>1</sub>=<input class="cg" type="text"> y<sub>1</sub>=<input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">  a= <input type="text"> b= <input type="text"></div>
+                                       </div>
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                            <div data-tab="tab3" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">(x-x<sub>1</sub>)<sup>2</sup>+(y-y<sub>1</sub>)<sup>2</sup>=R<sup>2</sup></div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">x<sub>1</sub>=<input class="cg" type="text"> y<sub>1</sub>=<input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12"> R= <input type="text"></div>
+                                       </div>
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                            <div data-tab="tab4" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">ax+by+c=0</div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">  a= <input type="text"> b= <input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                       <div class="col-12">  c= <input type="text"></div>
+                                       </div>
+                                       
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                            <div data-tab="tab5" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">y=kx+b</div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">  k= <input type="text"> b= <input type="text"></div>
+                                       </div>
+                                       
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                            <div data-tab="tab6" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">(y-y<sub>1</sub>)=</div>
+                                       <div class="drob">
+                                           <div>k</div>
+                                           <span></span>
+                                           <div>(x-x<sub>1</sub>)</div>
+                                       </div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">x<sub>1</sub>=<input class="cg" type="text"> y<sub>1</sub>=<input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                           <div class="col-12">  k= <input type="text"></div>
+                                       </div>
+                                       
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                            <div data-tab="tab7" class="main-set-box">
+                                <form action="">
+                                   <h5>Уравнение:</h5>
+                                   <div class="formular">
+                                       <div class="between">ax<sup>2</sup>+bx+c=0</div>
+                                   </div>
+                                   <div class="args">
+                                       <div class="row">
+                                           <div class="col-12">  a= <input type="text"> b= <input type="text"></div>
+                                       </div>
+                                       <div class="row">
+                                       <div class="col-12">  c= <input type="text"></div>
+                                       </div>
+                                       
+                                   </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="row radio-cl">
+                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        
+                                    </div>
+                                    <button class="build text-center">
+                                        ПОСТРОИТЬ
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-6">
+                <a href="">Автор проекта: Закутей Егор</a>
+                <br>
+                <div>Руководитель проекта: Николаева Юлия Геннадьевна</div>
+            </div>
+            <div class="col-6 text-right">
+               <div>Школьный проект "Мир невырожденных кривых второго порядка в прямоугольной системе координат"</div>
+               <br>
+                <a href="">Дизайнер и разработчик сайта: Закутей Егор</a>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
