@@ -20,20 +20,38 @@
     </section>
     <section id="nav">
         <div class="container">
-            <div class="nav-bar">
-                <button>
-                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                   
-                    Масштаб
-                </button>
-                <button>
-                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                    Очистить
-                </button>
-                <button>
-                  <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                    Руководство
-                </button>
+            <div class="nav-bar text-center">
+                <div class="ulrel text-center">
+                    <button>
+                      <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        Масштаб
+                    </button>
+                    <div class="none-ul">
+                        <ul>
+                            <li id="msh1">10 по оси Ох</li>
+                            <li id="msh2">20 по оси Ох</li>
+                            <li id="msh3">50 по оси Ох</li>
+                            <li id="msh4">100 по оси Ох</li>
+                            <li id="msh5">200 по оси Ох</li>
+                            <li id="msh6">500 по оси Ох</li>
+                            <li id="msh7">1000 по оси Ох</li>
+                            <li id="msh8">2000 по оси Ох</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ulrel">
+                    <button>
+                      <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        Очистить
+                    </button>
+                </div>
+                <div class="ulrel">
+                    <button>
+                      <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        Руководство
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -43,18 +61,19 @@
                <h3 class="text-center">Область построения</h3>
                 <div class="main-display"></div>
                 <div class="main-set">
-                    <h3 class="text-center">Введите параметры:</h3>
                     <div class="wrap row">
-                        <div class="col-lg-4 col-12 main-set-tabul">
-                           <h4>График:</h4>
-                            <button class="active main-set-tabli">Каноническая гипербола</button>
-                            <button class="main-set-tabli">Каноническая парабола</button>
-                            <button class="main-set-tabli">Эллипс</button>
-                            <button class="main-set-tabli">Окружность</button>
-                            <button class="main-set-tabli">Прямая в общем виде</button>
-                            <button class="main-set-tabli">График линейной функции</button>
-                            <button class="main-set-tabli">График функции обратной пропорциональности</button>
-                            <button class="main-set-tabli">График квадратичной функции</button>
+                        <div class="col-lg-4 ul-abs">
+                               <button id="graf"> <i class="fa fa-angle-double-right" aria-hidden="true"></i><h4 class="text-center">График:</h4><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                            <div class="main-set-tabul">
+                                <button class="active main-set-tabli">Каноническая гипербола</button>
+                                <button class="main-set-tabli">Каноническая парабола</button>
+                                <button class="main-set-tabli">Эллипс</button>
+                                <button class="main-set-tabli">Окружность</button>
+                                <button class="main-set-tabli">Прямая в общем виде</button>
+                                <button class="main-set-tabli">График линейной функции</button>
+                                <button class="main-set-tabli">График функции обратной пропорциональности</button>
+                                <button class="main-set-tabli">График квадратичной функции</button>
+                            </div>
                         </div>
                         <div class="tab-rel col-lg-8 col-12">
                           <h4 class="text-center">Установите коэффициенты и дополнительные параметры</h4>
@@ -62,6 +81,9 @@
                                 <form action="">
                                    <h5>Уравнение:</h5>
                                    <div class="formular">
+                                      <button id="giper">
+                                           <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                      </button>
                                        <div class="drob">
                                            <div>(x-x<sub>1</sub>)<sup>2</sup></div>
                                            <span></span>
@@ -89,10 +111,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl71" type="radio" name="clr" value="#"><label for="cl71" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl72" type="radio" name="clr" value="#"><label for="cl72" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl73" type="radio" name="clr" value="#"><label for="cl73" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl74" type="radio" name="clr" value="#"><label for="cl74" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -104,6 +126,9 @@
                                 <form action="">
                                    <h5>Уравнение:</h5>
                                    <div class="formular">
+                                      <button id="parab">
+                                           <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                      </button>
                                        <div class="between">
                                            (y-y<sub>1</sub>)<sup>2</sup>=p(x-x<sub>1</sub>)
                                        </div>
@@ -118,7 +143,7 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl21" type="radio" name="clr" value="#"><label for="cl21" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl21" type="radio" name="clr" value="#"><label for="cl21" class="cl"></label></div>
                                         <div class="rcl"><input id="cl22" type="radio" name="clr" value="#"><label for="cl22" class="cl"></label></div>
                                         <div class="rcl"><input id="cl23" type="radio" name="clr" value="#"><label for="cl23" class="cl"></label></div>
                                         <div class="rcl"><input id="cl24" type="radio" name="clr" value="#"><label for="cl24" class="cl"></label></div>
@@ -133,6 +158,9 @@
                                 <form action="">
                                    <h5>Уравнение:</h5>
                                    <div class="formular">
+                                      <button id="ellips">
+                                           <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                      </button>
                                        <div class="drob">
                                            <div>(x-x<sub>1</sub>)<sup>2</sup></div>
                                            <span></span>
@@ -160,10 +188,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl31" type="radio" name="clr" value="#"><label for="cl31" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl32" type="radio" name="clr" value="#"><label for="cl32" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl33" type="radio" name="clr" value="#"><label for="cl33" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl34" type="radio" name="clr" value="#"><label for="cl34" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -175,6 +203,9 @@
                                 <form action="">
                                    <h5>Уравнение:</h5>
                                    <div class="formular">
+                                      <button id="circl">
+                                           <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                      </button>
                                        <div class="between">(x-x<sub>1</sub>)<sup>2</sup>+(y-y<sub>1</sub>)<sup>2</sup>=R<sup>2</sup></div>
                                    </div>
                                    <div class="args">
@@ -187,10 +218,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl41" type="radio" name="clr" value="#"><label for="cl41" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl42" type="radio" name="clr" value="#"><label for="cl42" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl43" type="radio" name="clr" value="#"><label for="cl43" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl44" type="radio" name="clr" value="#"><label for="cl44" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -215,10 +246,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl51" type="radio" name="clr" value="#"><label for="cl51" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl52" type="radio" name="clr" value="#"><label for="cl52" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl53" type="radio" name="clr" value="#"><label for="cl53" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl54" type="radio" name="clr" value="#"><label for="cl54" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -240,10 +271,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl61" type="radio" name="clr" value="#"><label for="cl61" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl62" type="radio" name="clr" value="#"><label for="cl62" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl63" type="radio" name="clr" value="#"><label for="cl63" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl64" type="radio" name="clr" value="#"><label for="cl64" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -273,7 +304,7 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
                                         <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
                                         <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
                                         <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
@@ -301,10 +332,10 @@
                                    </div>
                                     <h5>Цвет:</h5>
                                     <div class="row radio-cl">
-                                        <div class="rcl"><input id="cl11" type="radio" name="clr" value="#"><label for="cl11" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl12" type="radio" name="clr" value="#"><label for="cl12" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl13" type="radio" name="clr" value="#"><label for="cl13" class="cl"></label></div>
-                                        <div class="rcl"><input id="cl14" type="radio" name="clr" value="#"><label for="cl14" class="cl"></label></div>
+                                        <div class="rcl"><input checked id="cl81" type="radio" name="clr" value="#"><label for="cl81" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl82" type="radio" name="clr" value="#"><label for="cl82" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl83" type="radio" name="clr" value="#"><label for="cl83" class="cl"></label></div>
+                                        <div class="rcl"><input id="cl84" type="radio" name="clr" value="#"><label for="cl84" class="cl"></label></div>
                                         
                                     </div>
                                     <button class="build text-center">
@@ -315,6 +346,127 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="circlTab">
+        <div class="container">
+            <div class="info-main">
+                <h3>Математическая справка.<br>Окружность:</h3>
+                <p>
+                    <span>Окружность</span> — геометрическое место точек , равноудаленных от данной точки. Эта точка называется центром окружности. Частный случай эллипса.<br>
+                    Окружность нулевого радиуса (вырожденная окружность) является точкой, иногда этот случай исключается из определения.<br>
+                    <span>Геометрическое место точек плоскости</span>, расстояние от которых до данной  точки не больше, чем заданное ненулевое, называется кругом.<br>
+                    <span>Уравнение окружности:</span>
+                </p>
+                <div class="formular">
+                    <div class="between">(x-x<sub>1</sub>)<sup>2</sup>+(y-y<sub>1</sub>)<sup>2</sup>=R<sup>2</sup></div>
+                </div>
+                <p>
+                    <span>Радиус</span> — не только величина расстояния, но и отрезок, соединяющий центр окружности с одной из её точек. Радиус всегда равен половине диаметра окружности.<br>
+                    Радиус всегда перпендикулярен к касательной прямой, проведенной к окружности в его общей точке с окружностью. То есть радиус является одновременно и нормалью к окружности.<br>
+                    <span>Окружность называется единичной</span>, если её радиус равен единице. Единичная окружность является одним из основных объектов тригонометрии.<br>
+                    <span>Отрезок</span>, соединяющий две точки окружности, называется её хордой. Хорда, проходящая через центр окружности, называется диаметром.<br>
+                    <span>Любые две </span>не совпадающие <span>точки</span> окружности делят её на две части. Каждая из этих частей называется дугой окружности. Дуга называется полуокружностью, если отрезок, соединяющий её концы, является диаметром.<br>
+                    <span>Длина</span> единичной полуокружности обозначается через π.<br>
+                    <span>Прямая</span>, имеющая с окружностью ровно одну общую точку, называется касательной к окружности, а их общая точка называется точкой касания прямой и окружности.<br>
+                    <span>Касательная</span> к окружности всегда перпендикулярна её радиусу (и диаметру), проведенному в точке касания, который является нормалью, проведенной в данной точке.
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="ellipsTab">
+        <div class="container">
+            <div class="info-main">
+                <h3>Математическая справка.<br>Эллипс:</h3>
+                <p>
+                    <span>Эллипс</span> — геометрическое место точек плоскости, для каждой из которых сумма расстояний до двух заданных точек плоскости (фокусов) есть величина постоянная.
+                    <span>Каноническое уравнение эллипса:</span>
+                </p>
+                <div class="formular">
+                       <div class="drob">
+                           <div>(x-x<sub>1</sub>)<sup>2</sup></div>
+                           <span></span>
+                           <div>
+                               a<sup>2</sup>
+                           </div>
+                       </div>
+                       <div class="between">+</div>
+                       <div class="drob">
+                           <div>(y-y<sub>1</sub>)<sup>2</sup></div>
+                           <span></span>
+                           <div>
+                               b<sup>2</sup>
+                           </div>
+                       </div>
+                       <div class="between">=1</div>
+                   </div>
+                <p>
+                    <span>Эллипс</span> также<span> можно определить</span> как: <br>
+                    1)Фигуру, которую можно получить из окружности, применяя аффинное преобразование<br>
+                    2)Ортогональную проекцию окружности на плоскость.<br>
+                    3)Пересечение плоскости и кругового цилиндра <br>
+                    <span>Некоторые свойства:</span><br>
+                    Проходящий через фокусы эллипса отрезок AB, концы которого лежат на эллипсе, называется большой осью данного эллипса. Длина большой оси равна 2a в вышеприведённом уравнении.<br>
+                    <span>Отрезок </span>CD, перпендикулярный большой оси эллипса, проходящий через центральную точку большой оси, концы которого лежат на эллипсе, называется малой осью эллипса.<br>
+                    Точка пересечения большой и малой осей эллипса называется его центром.<br>
+                    <span>Отрезки</span>, проведённые из центра эллипса к вершинам на большой и малой осях называются, соответственно, большой полуосью и малой полуосью эллипса, и обозначаются a и b.
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="info" id="parabTab">
+        <div class="container">
+            <div class="info-main">
+                <h3>Математическая справка.<br>Парабола:</h3>
+                <p><span> Парабола</span> (греч. παραβολή — приложение) — геометрическое место точек, равноудалённых от данной прямой (называемой директрисой параболы) и данной точки (называемой фокусом параболы).
+                Наряду с эллипсом и гиперболой, <span>парабола является коническим  сечением</span>. Она может быть определена как коническое сечение с единичным эксцентриситетом.
+                Точка параболы, ближайшая к её директрисе, называется вершиной этой параболы. Вершина является серединой перпендикуляра, опущенного из фокуса на директрису.<br>
+                <span>Каноническое уравнение параболы</span> в прямоугольной системе координат:</p>
+                <div class="formular">
+                   <div class="between">
+                       (y-y<sub>1</sub>)<sup>2</sup>=p(x-x<sub>1</sub>) , p>0
+                   </div>
+                </div>
+                <p>
+                <span>Квадратичная функция y=ax<sup>2</sup>+bx+c</span> при a≠0 также является уравнением параболы и графически изображается той же параболой, что и y=ax^2 ,но в отличие от последней имеет вершину не в начале координат, а в некоторой точке.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="giperTab" class="info">
+        <div class="container">
+            <div class="info-main">
+                <h3>Математическая справка.<br>Гипербола:</h3>
+                <p class="first"><span>Гипербола </span>(др. греч ὑπερβολή, от ὑπερ — «верх» + βαλειν — «бросать») — геометрическое место точек плоскости, для каждой из которых модуль разности расстояний до двух заданных точек плоскости (фокусов) есть величина постоянная. <br>
+                    Наряду с эллипсом и параболой, гипербола является коническим сечением и квадрикой. <br> Гипербола может быть определена как коническое сечение с эксцентриситетом, бо́льшим единицы.  <br>
+                    Термин <span>«гипербола»</span> (греч. ὑπερβολή — избыток) был введён Аполлонием Пергским (ок. 262 год до н. э. — ок. 190 год до н. э.), поскольку задача о построении точки гиперболы сводится к задаче о приложении с избытком. <br>
+                    <span>Задаётся уравнением:</span></p> 
+                                   <div class="formular">
+                                       <div class="drob">
+                                           <div>(x-x<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               a<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">-</div>
+                                       <div class="drob">
+                                           <div>(y-y<sub>1</sub>)<sup>2</sup></div>
+                                           <span></span>
+                                           <div>
+                                               b<sup>2</sup>
+                                           </div>
+                                       </div>
+                                       <div class="between">=1</div>
+                                   </div><p><br>
+                    <span>Определение гиперболы:</span> <br>
+                    Гипербола может быть определена как множество точек, образуемое в результате сечения кругового конуса плоскостью, отсекающей обе части конуса. Другими результатами сечения конуса плоскостью являются парабола, эллипс, а также такие вырожденные случаи, как пересекающиеся и совпадающие прямые и точка, возникающие, когда секущая плоскость проходит через вершину конуса. В частности, пересекающиеся прямые можно считать вырожденной гиперболой, совпадающей со своими асимптотами.  <br>
+                    <span>Через фокусы:</span> <br>
+                    Гипербола может быть определена как геометрическое место точек, абсолютная величина разности расстояний от которых до двух заданных точек, называемых фокусами, постоянна.</p>
+
             </div>
         </div>
     </section>
