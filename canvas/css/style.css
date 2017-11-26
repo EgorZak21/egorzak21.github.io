@@ -364,13 +364,13 @@ body {
   height: 40px;
   border: 8px solid tranparent; }
   .rcl:nth-child(1) {
-    background-color: #111; }
+    background-color: #212121; }
   .rcl:nth-child(2) {
-    background-color: #fff; }
+    background-color: #5A5AFF; }
   .rcl:nth-child(3) {
-    background-color: #3f3; }
+    background-color: #3DFF3D; }
   .rcl:nth-child(4) {
-    background-color: #44f; }
+    background-color: #FFFF3D; }
 
 .rcl {
   margin-top: 10px; }

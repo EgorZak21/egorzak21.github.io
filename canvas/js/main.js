@@ -23,7 +23,10 @@ $(document).ready(function(){
             $('.main-set-tabul').toggle(500);
         }
         wrap.find('.tab-rel>div').hide();
-        wrap.find('.tab-rel>div[data-tab='+dataTab+']').show();
+        wrap.find('.tab-rel>div[data-tab='+dataTab+']').show();       $('#parabTab').hide();
+        $('#ellipsTab').hide();
+        $('#circlTab').hide();
+        $('#giperTab').hide();
     });
     $('#graf').on('click',function(){
         if($(document).width()<991){
@@ -33,7 +36,7 @@ $(document).ready(function(){
     $('.none-ul li').on('click',function(){
         $('.none-ul').hide(500);
     });
-    $('.ulrel button').on('click',function(){
+    $('#msh').on('click',function(){
         $('.none-ul').toggle(500);
     });
     $('#parab').on('click',function(){
