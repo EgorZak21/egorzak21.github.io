@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $('#rukr').on('click',function(){ 
+    location.href="https://vk.com/doc171089069_454835258?hash=f3e75b506c14a57103&dl=0f8c97cda62eae0186"; 
+    });
     $('.info').hide();
     $(window).resize(function(){
     if($(document).width()>=991){
