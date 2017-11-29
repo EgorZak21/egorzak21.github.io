@@ -1,0 +1,312 @@
+@import "media","mixins"
+button
+    outline: none
+button:focus
+    outline: none
+button:hover
+    cursor: pointer
+label:hover
+    cursor: pointer
+body
+    font-family: 'Montserrat', sans-serif
+    background-image: url(../img/body-bg3.jpg)
+    background-repeat: repeat-y
+    background-size: 2200px
+#header
+    h1
+        margin-top: 10vh
+        color: white
+        font-weight: 700
+        font-size: 2.5em
+    p
+        margin-top: 7vh
+        color: white
+        font-weight: 400i
+        font-size: 0.8em
+#nav
+    margin-top: 10vh
+    .nav-bar
+        position: relative
+        display: flex
+        justify-content: center
+        button
+            width: 90%
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            .fa
+                display: inline-block
+                font-size: 0.6em
+                margin-right: 7px
+            margin: 3px 30px
+            background: rgba(36, 81, 196, 0.5)
+            border-top: 3px solid rgba(255, 255 , 255 , 0.2)
+            border-bottom: 3px solid rgba(255, 255 , 255 , 0.2)
+            color: white
+            border-left: none
+            border-right: none
+            font-weight: 400i
+            font-size: 1.1em
+            padding: 5px 10px
+
+#app   
+    .main
+        h3
+            color: $revers1
+            margin-bottom: 10px
+            font-weight: 400i
+            font-size: 1.1em
+        background-color: white
+        padding: 5vh
+        &-display
+            margin: auto
+            width: 95%
+            border: solid 3px $grey1
+        &-set
+            margin-top: 40px
+            &-box
+                form
+                    display: flex
+                    flex-direction: column
+                    align-items: space-between
+                h5
+                    margin-left: 20px
+                    color: $orange
+                    font-size: 1em
+            h4
+                padding: 5px 10%
+                color: $blue4
+            &-tab
+            &-tabli
+                &:hover
+                    cursor: pointer
+                background-color: #fff
+                margin-top: -4px
+                width: 100%
+                min-height: 50px
+                font-size: 0.63em
+                color: $bluet
+                border-right: none
+                border-left: none
+                border-top: 4px solid $blue3
+                border-bottom: 4px solid $blue3
+                
+            &-tabul
+                position: relative
+                flex-direction: column
+                align-items: center
+                justify-content: center
+            h3
+                margin-top: 30px
+.ul-abs
+    h4
+        margin-top: 7px
+        display: block
+        color: $blue4
+    #graf
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        i
+            display: inline
+            font-size: 28px
+            margin: none
+            color: $blue4
+        position: relative
+        background-color: white
+        width: 100%
+        margin-bottom: 5px
+        z-index: 500
+        border: 3px solid $mainblue
+.build
+    margin-right: 35px
+    position: absolute
+    bottom: 0
+    right: 0
+    font-weight: 600
+    font-size: 1.1em
+    min-width: 30%
+    padding: 10px 20px
+    color: white
+    border: none
+    background-color: $blue4 !important
+.active
+    z-index: 900
+    border-right: 5px solid $revers1 !important
+    border-left: 5px solid $revers1 !important
+.rcl
+    width: 20%
+    height: 40px
+    border: 8px solid tranparent
+    &:nth-child(1)
+        background-color: #212121
+    &:nth-child(2)
+        background-color: #5A5AFF
+    &:nth-child(3)
+        background-color: #3DFF3D
+    &:nth-child(4)
+        background-color: #FFFF3D
+.rcl
+    margin-top: 10px
+.radio-cl
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 0 5px 80px 5px
+    label
+        width: 100%
+        height: 40px
+        border: 5px solid $grey1
+    input
+        &:checked+label
+            border: 5px solid #FFDE40
+        display: none
+.args
+    input[type=text]
+        font-size: 0.75em
+        text-align: center
+        color: $grey2 !important
+        &:active
+            outline: none
+        width: 60px
+        height: 30px
+        margin: 3px 5px
+        padding: 0 3px
+        border-top: 3px solid $blue3
+        border-left: none
+        border-right: none
+        border-bottom: 3px solid $blue3
+    font-size: 0.8em
+    color: $revers1
+    margin-left: 20%
+
+.formular
+    position: relative
+    button
+        cursor: help
+        i
+            display: block
+        color: white
+        font-size: 1.05em
+        border: 5px solid $revers2
+        position: absolute
+        top: 0
+        right: 15%
+        background-color: $revers1
+    color: $grey3
+    margin-left: 20%
+    font-size: 1.1em
+    .between
+        margin: 0 0.3em
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    .drob
+        font-size: 0.85em
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        span
+            width: 100%
+            height: 2px
+            background-color: $grey3
+            color: $grey3
+
+#info
+    margin-top: 80px
+.info
+    &-tab
+        background-color: #fff
+        h4
+            font-size: 30px
+            color: $blue2
+            margin: 40px auto
+
+footer
+    .row
+        .col-6
+            div
+                margin: auto
+                text-align: center
+                width: 90%
+                padding: 5px
+            a
+                margin: auto
+                text-align: center
+                width: 90%
+                padding: 5px
+                color: white
+                display: block
+                border-bottom: 3px solid #274E7D
+                border-top: 3px solid #274E7D
+                &:active
+                    color: white
+                    text-decoration: none
+                &:hover
+                    color: white
+                    text-decoration: none
+                    border-bottom: 3px solid $revers1
+                    border-top: 3px solid $revers1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+    color: white 
+    font-size: 0.65em
+    padding: 20px
+    margin-top: 50px
+    background-color: #274E7D
+.ulrel
+    .none-ul
+        display: none
+    ul
+        z-index: 600
+        width: 100%
+        position: absolute
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        li
+            cursor: pointer
+            width: 100%
+            text-align: center
+            margin: 0 auto
+            background-color: $blue4
+            margin-top: 1px
+            border-top: 3px solid $blue3
+            border-bottom: 3px solid $blue3
+            padding: 5px 0
+            font-size: 0.65em
+            color: white
+            list-style-type: none
+    display: inline
+    position: relative
+.wrap
+    position: relative
+.info
+    margin: 0 3vw
+    padding-top: 60px
+    .container
+        background-color: white !important
+        .info-main
+            .formular
+                font-size: 1.5em 
+            p
+                span
+                    color: $orange
+                    font-size: 1.1em
+                color: $blue4
+            .first
+                margin: 30px 0
+            padding: 3vw
+            margin: 30px 0px
+            font-size: 0.7em
+            color: $orange
+            h3
+                text-align: center
+                font-size: 1.5em
