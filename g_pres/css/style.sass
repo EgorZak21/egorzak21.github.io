@@ -1,0 +1,147 @@
+@import "media","mixins"
+
+body
+    font-size: 20px
+
+body:not(#header)
+    z-index: 100
+#header
+    background-image: url(../img/header-bg.jpg)
+    background-size: cover
+    background-position: center top
+    &-before
+        height: 100vh
+    position: fixed
+    top: 0
+    right: 0
+    width: 100vw
+    height: 100vh
+.header
+    &-flex
+        margin: 5vh 0 11vh 0
+        color: #fff
+        .header
+            font-size: 2.3em
+    &-rel
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+#slider
+    h4
+        font-size: 2em
+        margin-bottom: 30px
+    .slider
+        &-mockup
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            position: relative
+            &-abs
+                overflow: hidden
+                img
+                    display: block
+                    width: 5vw
+                    display: block
+                    position: relative
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                position: absolute
+                top: -3vw
+                right: 0
+                left: 0
+                bottom: 0
+            .img-mac
+                display: block
+                width: 30vw
+    position: relative
+    padding: 40px 0
+    background-color: #fff
+#main
+    background-color: #fff
+    position: relative
+    .main
+        &-col
+            height: 328px
+            display: flex
+            h5
+                padding: 10px
+                background-color: rgba(0,0,0,0.5)
+                margin: auto
+                font-size: 1.5em
+                text-align: center
+            &:nth-child(1)
+                background-image: url(../img/main-col1.jpg)
+            &:nth-child(2)
+                background-image: url(../img/main-col2.jpg)
+            &:nth-child(3)
+                background-image: url(../img/main-col3.jpg)
+            padding: 50px 15px
+            border-left: #fff 15px solid
+            border-right: #fff 15px solid
+            border-top: #fff 50px solid
+            border-bottom: #fff 50px solid
+            color: #fff
+#univers
+    color: $blue
+    z-index: 200
+    margin-top: 100px
+    position: relative
+    .univers
+        background-color: #fff
+        &-logo
+            width: 80%
+            padding: 20px
+            h2
+                font-size: 3em
+                background-color: #fff
+            img
+                margin: 20px
+                background-color: #fff
+                height: 4em                
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+        &>img
+            width: 80%
+            display: block
+        p
+            margin: 20px 0
+            text-align: center
+            font-size: 1.5em
+            display: block
+            width: 80%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+#ex
+    .ex
+        background-repeat: no-repeat
+        padding-top: 110%
+        margin: 40px 20px
+        background-size: 100% auto
+    .ex1
+        background-image: url(../img/ex1.jpg)
+    .ex2
+        background-image: url(../img/ex2.jpg)
+    .ex3
+        background-image: url(../img/ex3.jpg)
+    margin-top: 100px
+    position: relative
+    background-color: transparent
+    h3
+        margin: auto
+        display: inline
+        color: $blue
+        background-color: #fff
+        font-size: 2.5em
+        padding: 10px
+        width: 70%
+        margin-bottom: 10px

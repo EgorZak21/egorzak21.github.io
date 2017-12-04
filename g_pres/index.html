@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Коллаж</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="header-before">
+        <div class="container"></div>
+    </section>
+    <section id="header">
+        <div class="container header-rel text-center">
+            <div class="header-flex">
+                Сайт-коллаж по географии <br>
+                "Моя будущая профессия"
+            </div>
+            <div class="header-flex">
+                <h1 class="header">ПРОФЕССИЯ ПРОГРАММИСТ</h1>
+            </div>
+            <div class="header-flex">
+                Выполнил ученик 9 "Б" класса
+                <br>
+                Закутей Егор
+            </div>
+        </div>
+    </section>
+    <section id="slider">
+        <div class="container">
+            <h4 class="text-center">Почему программирование?</h4>
+        </div>
+            <div class="slider-mockup">
+                <img src="img/mabook.png" class="img-mac" alt="">
+        <div class="slider-mockup-abs">
+            <img src="img/m1.png" alt="">
+            <img src="img/m4.png" alt="">
+            <img src="img/m3.png" alt="">
+            <img src="img/m2.png" alt="">
+            <img src="img/m5.png" alt="">
+            <img src="img/m6.png" alt="">
+            <img src="img/m7.png" alt="">
+            <img src="img/m8.png" alt="">
+        </div>
+            </div>
+    </section>
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 main-col">
+                    <h5>Свободная занятость</h5>
+                    <p> </p>
+                </div>
+                <div class="col-md-4 col-12 main-col">
+                    <h5>Возможность проффесионального роста</h5>
+                    <p> </p>
+                </div>
+                <div class="col-md-4 col-12 main-col">
+                    <h5>Большой зарботок за единицу времени</h5>
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="univers">
+        <div class="container">
+            <div class="univers">
+                <div class="univers-logo">
+                    <img src="img/ITMOlogo.png" alt="">
+                    <h2>Унивеситет ИТМО</h2>
+                </div>
+                <img src="img/ITMO.jpg" alt="">
+                <p>Университет ИТМО – ведущий вуз России в области информационных и фотонных технологий, один из немногих российских вузов, получивших в 2009 году статус национального исследовательского университета.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="ex">
+        <div class="container">
+            <div class="row text-center">
+                <h3>Нужно сдать:</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="ex ex1">
+<!--                        <h4>Русский <br> язык</h4>-->
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="ex ex2">
+<!--                        <h4>Математика</h4>-->
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="ex ex3">
+<!--                        <h4>Информатика</h4>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var scrl;
+            $(window).scroll(function(){
+                scrl=$(window).scrollTop();
+                if(scrl>screen.height){
+                    $('.slider-mockup-abs img').css('width','12vw');
+                    $('.header-flex').hide();
+                }else{
+                    $('.slider-mockup-abs img').css('width',(12*(scrl/screen.height))+'vw');
+                    $('.header-flex').show();
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
