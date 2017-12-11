@@ -1,0 +1,200 @@
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    min-height: 100px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  body {
+    min-height: 100px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    min-height: 100px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    min-height: 100px; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  body {
+    min-height: 100px; } }
+
+a:active {
+  text-decoration: none; }
+
+body {
+  height: 300vh;
+  font-family: 'PT Sans Caption', sans-serif;
+  background-color: #f6f2f0;
+  font-size: 19px; }
+
+#header .header-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #header .header-header h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 3px solid #567AFF;
+    border-bottom: 3px solid #567AFF;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-size: 3em;
+    color: #28292B;
+    display: block; }
+    #header .header-header h1 span {
+      padding-left: 5px;
+      display: inline-block;
+      margin: 5px;
+      border-left: 3px solid #567AFF;
+      border-bottom: 3px solid #567AFF;
+      color: #2033AF; }
+
+#header .header-logo {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #header .header-logo img {
+    border-radius: 10px;
+    border: #567AFF 5px solid; }
+
+#header .header-nav {
+  height: 80px;
+  background-color: #28292B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  #header .header-nav span {
+    color: #567AFF; }
+  #header .header-nav a {
+    padding-top: 20px;
+    color: white;
+    display: block; }
+    #header .header-nav a:hover {
+      text-decoration: none;
+      color: #567AFF; }
+
+#year {
+  margin-top: 20px; }
+  #year .year {
+    height: 60vh; }
+    #year .year-info {
+      height: 100%;
+      height: 75%; }
+      #year .year-info-fact {
+        padding-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        text-align: center; }
+        #year .year-info-fact-inner {
+          border-radius: 10px;
+          padding: 20px;
+          font-size: 1.5em;
+          color: white;
+          background-color: #0AA482; }
+      #year .year-info .col-4 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      #year .year-info img {
+        padding-bottom: 30%;
+        display: block;
+        width: 80%; }
+    #year .year-front {
+      position: absolute;
+      top: 30%;
+      left: -120%;
+      border-radius: 30px;
+      background-color: #fff;
+      min-height: 80%;
+      width: 200%; }
+      #year .year-front h2 {
+        padding: 20px 0 10px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em; }
+    #year .year-back img {
+      border-radius: 30px;
+      width: 100%; }
+
+#away {
+  margin-top: 20vh; }
+  #away .away-info {
+    padding: 20px;
+    z-index: 200;
+    position: absolute;
+    top: 40%;
+    right: -150%;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 160%; }
+    #away .away-info h2 {
+      text-align: center;
+      width: 100%;
+      font-size: 2em;
+      color: #28292B; }
+  #away .away-front {
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    right: -120%;
+    border-radius: 30px;
+    background-color: #fff;
+    min-height: 80%;
+    width: 190%; }
+    #away .away-front img {
+      border-radius: 10px;
+      z-index: 100;
+      width: 100%; }
+  #away .away-back img {
+    border-radius: 30px;
+    width: 100%; }

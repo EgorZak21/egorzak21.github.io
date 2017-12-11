@@ -1,0 +1,136 @@
+@import "media","mixins"
+a:active
+    text-decoration: none
+body
+    height: 300vh
+    font-family: 'PT Sans Caption', sans-serif
+    background-color: $maingrey
+    font-size: 19px
+#header
+    .header
+        &-header
+            h1
+                padding-top: 20px
+                padding-bottom: 20px
+                border-top: 3px solid $blue
+                border-bottom: 3px solid $blue
+                span
+                    padding-left: 5px
+                    display: inline-block
+                    margin: 5px
+                    border-left: 3px solid $blue
+                    border-bottom: 3px solid $blue
+                    color: $mainblue
+                font-weight: 700
+                margin-bottom: 50px
+                font-size: 3em
+                color: $mainblack
+                display: block
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &-logo
+            img
+                border-radius: 10px
+                border: $blue 5px solid
+            height: 90vh
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &-nav
+            span
+                color: $blue
+            a
+                &:hover
+                    text-decoration: none
+                    color: $blue
+                padding-top: 20px
+                color: white
+                display: block
+            height: 80px
+            background-color: $mainblack
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+#year
+    margin-top: 20px
+    .year
+        height: 60vh
+        &-info
+            &-fact
+                &-inner
+                    border-radius: 10px
+                    padding: 20px
+                    font-size: 1.5em
+                    color: white
+                    background-color: $maingreen
+                padding-bottom: 20px
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                text-align: center
+            height: 100%
+            .col-4
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+            height: 75%
+            img
+                padding-bottom: 30%
+                display: block
+                width: 80%
+        &-front
+            h2
+                padding: 20px 0 10px 0
+                width: 100%
+                text-align: center
+                font-size: 2.5em
+            position: absolute
+            top: 30%
+            left: -120%
+            border-radius: 30px
+            background-color: #fff
+            min-height: 80%
+            width: 200%
+        &-back
+            img
+                border-radius: 30px
+                width: 100%
+#away
+    margin-top: 20vh
+    .away
+        &-info
+            h2
+                text-align: center
+                width: 100%
+                font-size: 2em
+                color: $mainblack
+            padding: 20px
+            z-index: 200
+            position: absolute
+            top: 40%
+            right: -150%
+            border-radius: 5px
+            background-color: #fff
+            width: 160%
+        &-front
+            z-index: 100
+            img
+                border-radius: 10px
+                z-index: 100
+                width: 100%
+            position: absolute
+            top: 30%
+            right: -120%
+            border-radius: 30px
+            background-color: #fff
+            min-height: 80%
+            width: 190%
+        &-back
+            img
+                border-radius: 30px
+                width: 100%
+    

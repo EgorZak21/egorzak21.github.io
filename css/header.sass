@@ -1,0 +1,145 @@
+body
+    font-family: 'Varela', sans-serif
+    color: #26272d
+a,
+a:hover
+    color: #26272d
+    text-decoration: none
+button,
+button:focus,
+button:active,
+button:hover
+    outline:0 none !important
+    overflow: hidden
+@media only screen and (min-width : 320px) and (max-width : 480px)
+    body
+        font-size: 13px
+    #header
+        height: 210vw
+        .header-menu1
+            text-align: center !important
+        .header-menu2
+            text-align: center !important
+        .header-menu3
+            text-align: center !important
+        background-size: cover
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 481px) and (max-width : 767px)
+    body
+        font-size: 15px
+    #header
+        .header-menu1
+            text-align: center !important
+        .header-menu2
+            text-align: center !important
+        .header-menu3
+            text-align: center !important
+        height: 140vw
+        background-size: cover
+    
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width : 991px)
+    body
+        font-size: 15px
+    #header
+        .header-menu1
+            text-align: center !important
+        .header-menu2
+            text-align: center !important
+        .header-menu3
+            text-align: center !important
+        height: 120vw
+        background-size: cover
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width : 1199px)
+    body
+        font-size: 16px
+    #header
+        height: 90vw
+        background-size: cover
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) and (max-width : 1980px)
+    body
+        font-size: 18px
+    #header
+        height: 70vw
+        background-size: cover
+
+@media only screen and (min-width : 1981px)
+    body
+        font-size: 22px
+    #header
+        height: 60vw
+        background-size: cover
+#header
+    z-index: 1
+    background-image: url(../img/header-bg.jpg)
+    background-size: cover
+    .header
+        &-wrap
+            height: 100%
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+        &-menu
+            padding-top: 20px
+            width: 100%
+            a
+                padding: 0 10px
+            font-family: 'Lato', sans-serif
+        &-menu1
+            padding-top: 20px
+            text-align: left
+        &-menu2
+            padding-top: 20px
+            strong
+                font-weight: 900
+            text-align: center
+        &-menu3
+            padding-top: 20px
+            button
+                padding: 0 15px
+                font-size: 0.9em
+                span
+                    margin: 0 6px
+                color: white
+                border: none
+                background: #267df4
+                height: 40px
+                border-radius: 20px
+            text-align: right
+        &-info
+            text-align: center
+            h1
+                font-size: 4em
+            p
+                margin-top: 10px
+                color: #8c8f94
+                font-size: 1.2em
+            button
+                i
+                    margin: auto
+                    font-size: 1em
+                    margin-right: 10px
+                font-size: 1.4em
+                margin-top: 40px
+                border: 2px solid #dadcde
+                border-radius: 30px
+                height: 70px
+                padding: 0 40px
+                background-color: #fff
+        &-iwrap
+            height: 28vw
+            width: 30vw
+            position: relative
+            overflow: hidden
+            img
+                z-index: 1
+                position: absolute
+                top: 0
+                right: 0
+                width: 100%
+                height: 54vw
+    
