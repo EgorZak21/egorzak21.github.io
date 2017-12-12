@@ -25,7 +25,7 @@
     min-height: 100px; } }
 
 span {
-  color: #F5D01B; }
+  color: #2636A9; }
 
 a:active {
   text-decoration: none; }
@@ -35,7 +35,7 @@ body {
   overflow-x: hidden;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  background-image: url(../img/bg3.jpg);
+  background-image: url(../img/bg.jpg);
   font-size: 19px; }
 
 .nav-space {
@@ -70,77 +70,79 @@ body {
 .t {
   margin-top: 5px !important; }
 
-#header .header-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  #header .header-header h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 3px solid #FFDE3F;
-    border-bottom: 3px solid #FFDE3F;
-    font-weight: 700;
-    margin-bottom: 50px;
-    font-size: 3em;
-    color: #413F3C;
-    display: block; }
-    #header .header-header h1 span {
-      padding-left: 5px;
-      display: inline-block;
-      margin: 5px;
-      border-left: 3px solid #FFDE3F;
-      border-bottom: 3px solid #FFDE3F;
-      color: #FCC93A; }
-
-#header .header-logo {
-  height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  #header .header-logo img {
-    width: 100%; }
-
-#header .header-nav {
-  height: 80px;
-  background-color: #413F3C;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
-  #header .header-nav span {
-    color: #FFDE3F; }
-  #header .header-nav a {
-    padding-top: 20px;
-    color: white;
-    display: block; }
-    #header .header-nav a:hover {
-      text-decoration: none;
-      color: #FFDE3F; }
+#header {
+  color: white;
+  background-image: url(../img/bg-header1.jpg);
+  background-size: cover; }
+  #header .header-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #header .header-header h1 {
+      color: white;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-top: 3px solid #384CFF;
+      border-bottom: 3px solid #384CFF;
+      font-weight: 700;
+      margin-bottom: 50px;
+      font-size: 3em;
+      display: block; }
+      #header .header-header h1 span {
+        padding-left: 5px;
+        display: inline-block;
+        margin: 5px;
+        border-left: 3px solid #384CFF;
+        border-bottom: 3px solid #384CFF;
+        color: #384CFF; }
+  #header .header-logo {
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #header .header-logo img {
+      width: 100%; }
+  #header .header-nav {
+    height: 80px;
+    background-color: #292929;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    #header .header-nav span {
+      color: #384CFF; }
+    #header .header-nav a {
+      padding-top: 20px;
+      color: white;
+      display: block; }
+      #header .header-nav a:hover {
+        text-decoration: none;
+        color: #384CFF; }
 
 #year {
   margin-bottom: 10vw;
@@ -163,11 +165,11 @@ body {
         justify-content: space-around;
         text-align: center; }
         #year .year-info-fact-inner {
-          border-top: solid #FAEA98 6px;
+          border-top: solid #707AAB 6px;
           padding: 20px;
           font-size: 1.9vw; }
           #year .year-info-fact-inner:nth-child(2) {
-            border-bottom: solid #FAEA98 6px; }
+            border-bottom: solid #707AAB 6px; }
       #year .year-info .col-4 {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -218,8 +220,8 @@ body {
     border-radius: 5px;
     width: 200%; }
     #away .away-info h2 {
-      border-top: 4px solid #FAEA98;
-      border-bottom: 4px solid #FAEA98;
+      border-top: 4px solid #707AAB;
+      border-bottom: 4px solid #707AAB;
       text-align: center;
       width: 100%;
       font-size: 2em;
@@ -252,8 +254,8 @@ body {
   #why .why .row {
     position: relative; }
   #why .why h2 {
-    border-top: 4px solid #FAEA98;
-    border-bottom: 4px solid #FAEA98;
+    border-top: 4px solid #707AAB;
+    border-bottom: 4px solid #707AAB;
     display: block;
     font-size: 2.5em;
     width: 100%;
@@ -366,7 +368,7 @@ body {
     #fix .fix-front {
       padding-left: 10px;
       text-align: left;
-      border-left: solid 5px #FAEA98;
+      border-left: solid 5px #707AAB;
       margin-left: 10vw;
       padding: 20px 20px 20px 13px;
       font-size: 1.2em;
@@ -393,11 +395,10 @@ body {
     padding: 10px;
     z-index: 500;
     position: absolute;
-    border-right: solid 7px #FAEA98;
+    border-right: solid 7px #707AAB;
     right: 0;
     top: 8vw;
-    width: 120%;
-    border-radius: 15px; }
+    width: 120%; }
 
 #cisac1 .cisac1-costinf {
   padding-top: 1.5vw;
