@@ -2,10 +2,29 @@
 a:active
     text-decoration: none
 body
-    height: 300vh
+    background-image: url(../img/bg3.jpg)
     font-family: 'PT Sans Caption', sans-serif
-    background-color: $maingrey
     font-size: 19px
+.nav-space
+    height: 40px
+    background-image: url( "../img/arn"+$arnament+".png")
+    background-size: auto 100%
+.space
+    margin-top: 40px
+    margin-bottom: 40px
+    height: 40px
+    background-image: url( "../img/arn"+$arnament+".png")
+    background-size: auto 100%
+.spacer
+    margin-top: 40px
+    margin-bottom: 40px
+    height: 40px
+    background-image: url( "../img/arn"+$arnament+"r.png")
+    background-size: auto 100%
+.b
+    margin-bottom: 5px !important
+.t
+    margin-top: 5px !important
 #header
     .header
         &-header
@@ -32,8 +51,7 @@ body
             align-items: center
         &-logo
             img
-                border-radius: 10px
-                border: $blue 5px solid
+                width: 100%
             height: 90vh
             display: flex
             flex-direction: column
@@ -55,6 +73,7 @@ body
             flex-direction: row
             justify-content: space-around
 #year
+    margin-bottom: 10vw
     margin-top: 20px
     .year
         height: 60vh
@@ -63,7 +82,7 @@ body
                 &-inner
                     border-radius: 10px
                     padding: 20px
-                    font-size: 1.5em
+                    font-size: 1.9vw
                     color: white
                     background-color: $maingreen
                 padding-bottom: 20px
@@ -100,7 +119,7 @@ body
                 border-radius: 30px
                 width: 100%
 #away
-    margin-top: 20vh
+    margin-bottom: 12vw
     .away
         &-info
             h2
@@ -133,4 +152,229 @@ body
             img
                 border-radius: 30px
                 width: 100%
-    
+#why
+    height: 63vw
+    position: relative
+    padding-top: 8vw
+    margin-top: 30px
+    .why
+        .row
+            position: relative
+        h2
+            display: block
+            font-size: 2.5em
+            width: 100%
+            left: 0
+            text-align: center
+            top: -6vw
+            position: absolute
+        &-img1
+            height: 28vw
+            width: 46vw
+            left: 5vw
+            position: absolute
+            
+        &-img2
+            height: 28vw
+            width: 43vw
+            right: 5vw
+            position: absolute
+        &-img3
+            width: 45vw
+            top: 34vw
+            left: 5vw
+            position: absolute
+        &-img4
+            width: 45vw
+            top: 34vw
+            right: 5vw
+            position: absolute
+        &-info
+            border-radius: 10px
+            text-align: center
+            padding: 2vw
+            font-size: 1.5em
+            background-color: #fff
+            z-index: 500
+            width: 40vw
+            top: 25vw
+            left: 30vw
+            position: absolute
+
+#oku
+    margin-bottom: 10vw
+    margin-top: 20px
+    .oku
+        &-front
+            font-size: 1.2em
+            padding: 20px
+            position: absolute
+            bottom: 21vw
+            right: -13vw
+            border-radius: 30px
+            background-color: #fff
+            
+            width: 150%
+        &-front2
+            .cl
+                font-size: 1em
+            span
+                color: $maingreen
+                font-size: 1.4em
+            font-size: 1.3em
+            z-index: 500
+            position: absolute
+            top: 28vw
+            right: -25vw
+            border-radius: 30px
+            background-color: #fff
+            padding: 30px
+            width: 40vw
+        &-back
+            height: 45vw
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                margin-top: 3vw
+                border-radius: 30px
+                width: 100%
+#fix
+    margin-bottom: 50px
+    .fix
+        &-front
+            text-align: center
+            border-radius: 5px
+            top: 20vw
+            left: -25vw
+            padding: 20px
+            font-size: 1.2em
+            background-color: #fff
+            position: absolute
+            width: 170%
+        &-back
+            img
+                border-radius: 5px
+                width: 100%
+#lost
+    .lost
+        &-back
+            img
+                width: 100%
+        &-front
+            text-align: center
+            font-size: 1.2em
+            padding: 30px
+            z-index: 500
+            position: absolute
+            right: -20vw
+            top: 12vw
+            width: 130%
+            background-color: #fff
+            border-radius: 15px
+    margin-top: 100px
+#cisac1
+    .cisac1
+        &-costinf
+            padding-top: 1.5vw
+            text-align: right
+            span
+                color: $red
+            font-size: 2em
+        &-cost
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            h3
+                color: $red
+                font-weight: 700
+                font-size: 5em
+            p
+                margin-top: -30px
+                color: $red
+                font-size: 2em
+        &-costinf
+            
+        &-info
+            border-top: 3px solid $red
+            border-bottom: 3px solid $red
+            text-align: center
+            font-size: 2vw
+            padding: 15px
+            margin: 25px 0
+        &-text
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            p
+                font-size: 2.15vw
+                span
+                    font-weight: 700
+                    color: $red
+        &-img
+            img
+                border-radius: 10px
+                width: 100%
+.m
+    font-size: 1.9em !important
+#cisac2
+    .cisac2
+        padding-bottom: 20px
+        border-bottom: 4px solid $red
+        &-info
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            h4
+                margin-bottom: 20px
+                font-weight: 700
+                color: $red
+                text-align: center
+                display: block
+                font-size: 3em
+            p
+                display: block
+                text-align: center
+                font-size: 1.49em
+        &-img
+            img
+                margin-top: -30px
+                margin-left: -20px
+                width: 100%
+        &-header
+            margin-bottom: 50px
+            text-align: center
+            font-size: 2em
+            padding: 10px 60px
+            border-top: solid $red 4px
+            border-bottom: solid $red 4px
+            span
+                display: inline
+                font-weight: 700
+                margin: 0 7px
+                color: $red
+#cisac3
+    margin-top: 40px
+    .cisac3
+        &-img
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                display: block
+                width: 105%
+        &-info
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            h5
+                font-size: 1.45em
+                span
+                    font-weight: 700
+                    color: $red
