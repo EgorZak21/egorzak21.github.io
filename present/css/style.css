@@ -24,12 +24,16 @@
   body {
     min-height: 100px; } }
 
+span {
+  color: #F5D01B; }
+
 a:active {
   text-decoration: none; }
 
 body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
   background-image: url(../img/bg3.jpg);
-  font-family: 'PT Sans Caption', sans-serif;
   font-size: 19px; }
 
 .nav-space {
@@ -49,6 +53,13 @@ body {
   margin-bottom: 40px;
   height: 40px;
   background-image: url("../img/arn7r.png");
+  background-size: auto 100%; }
+
+.spaceg {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 40px;
+  background-image: url("../img/arn7g.png");
   background-size: auto 100%; }
 
 .b {
@@ -150,11 +161,11 @@ body {
         justify-content: space-around;
         text-align: center; }
         #year .year-info-fact-inner {
-          border-radius: 10px;
+          border-top: solid #FAEA98 6px;
           padding: 20px;
-          font-size: 1.9vw;
-          color: white;
-          background-color: #0AA482; }
+          font-size: 1.9vw; }
+          #year .year-info-fact-inner:nth-child(2) {
+            border-bottom: solid #FAEA98 6px; }
       #year .year-info .col-4 {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -175,33 +186,38 @@ body {
         width: 80%; }
     #year .year-front {
       position: absolute;
-      top: 30%;
-      left: -120%;
-      border-radius: 30px;
-      background-color: #fff;
+      top: 0;
+      left: 2vw;
       min-height: 80%;
-      width: 200%; }
+      width: 45vw; }
       #year .year-front h2 {
-        padding: 20px 0 10px 0;
+        padding: 0px 0 10px 0;
         width: 100%;
         text-align: center;
         font-size: 2.5em; }
-    #year .year-back img {
-      border-radius: 30px;
-      width: 100%; }
+    #year .year-back {
+      height: 22vw; }
+      #year .year-back img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 30px;
+        width: 45vw; }
 
 #away {
+  height: 27vw;
   margin-bottom: 12vw; }
   #away .away-info {
-    padding: 20px;
+    padding: 20px 15vw;
     z-index: 200;
     position: absolute;
-    top: 40%;
-    right: -150%;
+    top: 28vw;
+    left: 0;
     border-radius: 5px;
-    background-color: #fff;
-    width: 160%; }
+    width: 200%; }
     #away .away-info h2 {
+      border-top: 4px solid #FAEA98;
+      border-bottom: 4px solid #FAEA98;
       text-align: center;
       width: 100%;
       font-size: 2em;
@@ -209,19 +225,22 @@ body {
   #away .away-front {
     z-index: 100;
     position: absolute;
-    top: 30%;
-    right: -120%;
+    top: 0;
+    right: -3vw;
     border-radius: 30px;
     background-color: #fff;
     min-height: 80%;
-    width: 190%; }
+    width: 45vw; }
     #away .away-front img {
       border-radius: 10px;
       z-index: 100;
       width: 100%; }
   #away .away-back img {
+    top: 0;
+    left: 3vw;
+    position: absolute;
     border-radius: 30px;
-    width: 100%; }
+    width: 42vw; }
 
 #why {
   height: 63vw;
@@ -231,6 +250,8 @@ body {
   #why .why .row {
     position: relative; }
   #why .why h2 {
+    border-top: 4px solid #FAEA98;
+    border-bottom: 4px solid #FAEA98;
     display: block;
     font-size: 2.5em;
     width: 100%;
@@ -318,35 +339,62 @@ body {
       width: 100%; }
 
 #fix {
+  height: 34vw;
   margin-bottom: 50px; }
-  #fix .fix-front {
-    text-align: center;
-    border-radius: 5px;
-    top: 20vw;
-    left: -25vw;
-    padding: 20px;
-    font-size: 1.2em;
-    background-color: #fff;
-    position: absolute;
-    width: 170%; }
-  #fix .fix-back img {
-    border-radius: 5px;
-    width: 100%; }
+  #fix .container {
+    height: 100%; }
+    #fix .container .row {
+      height: 100%; }
+      #fix .container .row .col-4 {
+        height: 100%; }
+  #fix .fix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #fix .fix-front {
+      padding-left: 10px;
+      text-align: left;
+      border-left: solid 5px #FAEA98;
+      margin-left: 10vw;
+      padding: 20px 20px 20px 13px;
+      font-size: 1.2em;
+      width: 30vw; }
+    #fix .fix-back img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 5px;
+      width: 55vw; }
 
 #lost {
+  height: 35vw;
   margin-top: 100px; }
   #lost .lost-back img {
-    width: 100%; }
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0; }
   #lost .lost-front {
-    text-align: center;
+    padding-right: 13px;
+    text-align: right;
     font-size: 1.2em;
-    padding: 30px;
+    padding: 10px;
     z-index: 500;
     position: absolute;
-    right: -20vw;
-    top: 12vw;
-    width: 130%;
-    background-color: #fff;
+    border-right: solid 7px #FAEA98;
+    right: 0;
+    top: 8vw;
+    width: 120%;
     border-radius: 15px; }
 
 #cisac1 .cisac1-costinf {
@@ -497,3 +545,138 @@ body {
       #cisac3 .cisac3-info h5 span {
         font-weight: 700;
         color: #FA5067; }
+
+#dss {
+  padding: 50px 0; }
+  #dss .dss-info {
+    padding: 10px;
+    font-size: 1.4em; }
+    #dss .dss-info span {
+      font-weight: 700;
+      color: #39DB30; }
+  #dss .dss-header h2 {
+    padding: 20px 0;
+    border-top: 3px solid #00fc2a;
+    border-bottom: 3px solid #00fc2a;
+    font-weight: 700;
+    font-size: 3em; }
+    #dss .dss-header h2 span {
+      padding-left: 5px;
+      display: inline-block;
+      margin: 5px;
+      border-left: 3px solid #00fc2a;
+      border-bottom: 3px solid #00fc2a;
+      color: #39DB30; }
+
+#dss2 {
+  position: relative;
+  height: 43vw; }
+  #dss2 h2 {
+    border-top: 3px solid #00fc2a;
+    border-bottom: 3px solid #00fc2a;
+    border-radius: 10px;
+    z-index: 500;
+    text-align: center;
+    padding: 10px;
+    width: 60vw;
+    top: 0vw;
+    right: 20vw;
+    position: absolute; }
+    #dss2 h2 span {
+      color: #39DB30; }
+  #dss2 img {
+    position: absolute;
+    top: 13vw;
+    right: 20vw;
+    width: 60vw;
+    height: 30vw; }
+
+#dss3 {
+  padding-top: 60px; }
+  #dss3 .dss3-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #dss3 .dss3-img div {
+      height: 30vw;
+      width: 20vw;
+      background-color: #f6f2f0; }
+  #dss3 .dss3-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #dss3 .dss3-info p {
+      padding-left: 20px;
+      border-left: 6px #00fc2a solid;
+      font-size: 2.4em; }
+      #dss3 .dss3-info p span {
+        color: #39DB30; }
+
+#dssinfo .dssinfo {
+  margin-top: 60px; }
+  #dssinfo .dssinfo-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4em; }
+    #dssinfo .dssinfo-text p {
+      border-left: 4px #00fc2a solid; }
+    #dssinfo .dssinfo-text span {
+      font-weight: 700;
+      color: #39DB30; }
+  #dssinfo .dssinfo-img img {
+    width: 100%; }
+  #dssinfo .dssinfo-img2 img {
+    width: 100%; }
+  #dssinfo .dssinfo-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4em; }
+    #dssinfo .dssinfo-main p {
+      border-left: 4px #00fc2a solid; }
+    #dssinfo .dssinfo-main span {
+      font-weight: 700;
+      color: #39DB30; }

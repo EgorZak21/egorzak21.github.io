@@ -1,9 +1,13 @@
 @import "media","mixins"
+
+span
+    color: $blue3
 a:active
     text-decoration: none
 body
+    font-family: 'Rubik', sans-serif
+    font-weight: 500
     background-image: url(../img/bg3.jpg)
-    font-family: 'PT Sans Caption', sans-serif
     font-size: 19px
 .nav-space
     height: 40px
@@ -20,6 +24,12 @@ body
     margin-bottom: 40px
     height: 40px
     background-image: url( "../img/arn"+$arnament+"r.png")
+    background-size: auto 100%
+.spaceg
+    margin-top: 40px
+    margin-bottom: 40px
+    height: 40px
+    background-image: url( "../img/arn"+$arnament+"g.png")
     background-size: auto 100%
 .b
     margin-bottom: 5px !important
@@ -80,11 +90,11 @@ body
         &-info
             &-fact
                 &-inner
-                    border-radius: 10px
+                    &:nth-child(2)
+                        border-bottom: solid $blue2 6px
+                    border-top: solid $blue2 6px
                     padding: 20px
                     font-size: 1.9vw
-                    color: white
-                    background-color: $maingreen
                 padding-bottom: 20px
                 display: flex
                 flex-direction: column
@@ -103,38 +113,42 @@ body
                 width: 80%
         &-front
             h2
-                padding: 20px 0 10px 0
+                padding: 0px 0 10px 0
                 width: 100%
                 text-align: center
                 font-size: 2.5em
             position: absolute
-            top: 30%
-            left: -120%
-            border-radius: 30px
-            background-color: #fff
+            top: 0
+            left: 2vw
             min-height: 80%
-            width: 200%
+            width: 45vw
         &-back
+            height: 22vw
             img
+                position: absolute
+                top: 0
+                right: 0
                 border-radius: 30px
-                width: 100%
+                width: 45vw
 #away
+    height: 27vw
     margin-bottom: 12vw
     .away
         &-info
             h2
+                border-top: 4px solid $blue2
+                border-bottom: 4px solid $blue2
                 text-align: center
                 width: 100%
                 font-size: 2em
                 color: $mainblack
-            padding: 20px
+            padding: 20px 15vw
             z-index: 200
             position: absolute
-            top: 40%
-            right: -150%
+            top: 28vw
+            left: 0
             border-radius: 5px
-            background-color: #fff
-            width: 160%
+            width: 200%
         &-front
             z-index: 100
             img
@@ -142,16 +156,19 @@ body
                 z-index: 100
                 width: 100%
             position: absolute
-            top: 30%
-            right: -120%
+            top: 0
+            right: -3vw
             border-radius: 30px
             background-color: #fff
             min-height: 80%
-            width: 190%
+            width: 45vw
         &-back
             img
+                top: 0
+                left: 3vw
+                position: absolute
                 border-radius: 30px
-                width: 100%
+                width: 42vw
 #why
     height: 63vw
     position: relative
@@ -161,6 +178,8 @@ body
         .row
             position: relative
         h2
+            border-top: 4px solid $blue2
+            border-bottom: 4px solid $blue2
             display: block
             font-size: 2.5em
             width: 100%
@@ -241,37 +260,54 @@ body
                 border-radius: 30px
                 width: 100%
 #fix
+    .container
+        height: 100%
+        .row
+            height: 100%
+            .col-4
+                height: 100%
+    height: 34vw
     margin-bottom: 50px
     .fix
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
         &-front
-            text-align: center
-            border-radius: 5px
-            top: 20vw
-            left: -25vw
-            padding: 20px
+            padding-left: 10px
+            text-align: left
+            border-left: solid 5px $blue2
+            margin-left:  10vw
+            padding: 20px 20px 20px 13px
             font-size: 1.2em
-            background-color: #fff
-            position: absolute
-            width: 170%
+            width: 30vw
         &-back
             img
+                position: absolute
+                top: 0
+                right: 0
                 border-radius: 5px
-                width: 100%
+                width: 55vw
 #lost
+    height: 35vw
     .lost
         &-back
             img
+                position: absolute
                 width: 100%
+                top: 0
+                left: 0
         &-front
-            text-align: center
+            padding-right: 13px
+            text-align: right
             font-size: 1.2em
-            padding: 30px
+            padding: 10px
             z-index: 500
             position: absolute
-            right: -20vw
-            top: 12vw
-            width: 130%
-            background-color: #fff
+            border-right: solid 7px $blue2
+            right: 0
+            top: 8vw
+            width: 120%
             border-radius: 15px
     margin-top: 100px
 #cisac1
@@ -378,3 +414,104 @@ body
                 span
                     font-weight: 700
                     color: $red
+#dss
+    padding: 50px 0
+    .dss
+        &-info
+            span
+                font-weight: 700
+                color: $green
+            padding: 10px
+            font-size: 1.4em
+        &-header
+            h2
+                padding: 20px 0
+                border-top: 3px solid $green2
+                border-bottom: 3px solid $green2
+                font-weight: 700
+                font-size: 3em
+                span
+                    padding-left: 5px
+                    display: inline-block
+                    margin: 5px
+                    border-left: 3px solid $green2
+                    border-bottom: 3px solid $green2
+                    color: $green
+#dss2
+    position: relative
+    height: 43vw
+    h2
+        span
+            color: $green
+        border-top: 3px solid $green2
+        border-bottom: 3px solid $green2
+        border-radius: 10px
+        z-index: 500
+        text-align: center
+        padding: 10px
+        width: 60vw
+        top: 0vw
+        right: 20vw
+        position: absolute
+    img
+        position: absolute
+        top: 13vw
+        right: 20vw
+        width: 60vw
+        height: 30vw
+#dss3
+    padding-top: 60px
+    .dss3
+        &-img
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            div
+                height: 30vw
+                width: 20vw
+                background-color: $maingrey
+        &-info
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            p
+                span
+                    color: $green
+                padding-left: 20px
+                border-left: 6px $green2 solid
+                font-size: 2.4em
+#dssinfo
+    .dssinfo
+        margin-top: 60px
+        &-text
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            text-align: center
+            p
+                border-left: 4px $green2 solid
+            font-size: 1.4em
+            span
+                font-weight: 700
+                color: $green
+        &-img
+            img
+                width: 100%
+        &-img2
+            img
+                width: 100%
+        &-main
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            text-align: center
+            p
+                border-left: 4px $green2 solid
+            font-size: 1.4em
+            span
+                font-weight: 700
+                color: $green
