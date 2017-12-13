@@ -19,34 +19,20 @@
    <div class="up" id="top">
          <img src="img/arrow.png" alt="">
    </div>
-    <div class="navigation">
-        <div class="container relativ">
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <a href="" class="navigation-a"><div><span>Diko</span>Tech</div></a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#year1" class="navigation-a"><div>ПОЛОЖЕНИЕ СЕЙЧАС</div></a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#cisac1" class="navigation-a"><div>НАША КОНЦЕПИЯ</div></a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#dssd" class="navigation-a"><div>НАШЕ УСТРОЙТСТВО</div></a>
-                </div>
+    <section id="menu">
+            <img id="menu1" src="img/menu.png" alt="">
+            <div class="ul">
+                <a href="#ul1">Музыканты и их проблемы</a>
+                <a href="#why">Музыка и бизнес</a>
+                <a href="#fix">Система работы</a>
+                <a href="#cisac1">Международная практика</a>
+                <a href="#cisac2">Достижения Cisac</a>
+                <a href="#dss">Наше решение</a>
+                <a href="#dss3">Механика работы</a>
             </div>
-        </div>
-    </div>
+    </section>
     <section id="header">
         <div class="container ">
-<!--
-           <div class="row header-nav bouncelnLeft">
-               <a href=""><span>Diko</span>Tech</a>
-               <a href="#year1">ПОЛОЖЕНИЕ МУЗЫКАНТОВ</a>
-               <a href="#cisac1">НАША КОНЦЕПИЯ</a>
-               <a href="#dssd">НАШЕ УСТРОЙТСТВО</a>
-           </div>
--->
             <div class="row">
                 <div class="col-md-6 col-12 header-header wow fadeInLeft">
                     <h1><span>D</span>igital <br> <span>S</span>ound <span>S</span>canner</h1>
@@ -57,7 +43,7 @@
             </div>
         </div>
     </section>
-    <div id="year1" class="space t"></div>
+    <div id="ul1" class="space t"></div>
     <section id="year">
         <div class="container">
             <div class="row">
@@ -267,7 +253,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 dss3-img wow zoomInDown" data-wow-duration="2s" >
-                    <div>ИЗОБАЖЕНИЕ УСТРОЙСТВА PNG</div> 
+                    <img src="img/datchick.jpg" alt="">
                 </div>
                 <div class="col-md-8 dss3-info">
                     <p>
@@ -348,6 +334,14 @@
           $('body, html').animate({
             scrollTop: 0
           }, delay);
+        });
+        $('#menu1').on('click',function(){
+             $('#menu1').fadeOut();
+            $('.ul').fadeIn();
+        });
+        $('.ul').on('click',function(){
+            $('.ul').fadeOut();
+             $('#menu1').fadeIn();
         });
       });
     </script>

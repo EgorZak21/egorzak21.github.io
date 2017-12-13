@@ -1,3 +1,38 @@
+#menu .ul {
+  display: none;
+  background-color: #413F3C;
+  position: fixed;
+  z-index: 900;
+  border-radius: 15px;
+  left: 30px;
+  top: 30px; }
+  #menu .ul a {
+    margin: 0 5%;
+    padding: 2px;
+    width: 90%;
+    text-align: center;
+    opacity: 0.8;
+    background-color: #413F3C;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    color: white;
+    border-top: 3px solid white; }
+    #menu .ul a:hover {
+      text-decoration: none; }
+    #menu .ul a:nth-child(1) {
+      border: none; }
+
+#menu img {
+  border-radius: 15px;
+  z-index: 900;
+  cursor: pointer;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 30px;
+  left: 30px; }
+
 .up {
   color: white;
   font-size: 25px;
@@ -16,42 +51,6 @@
     right: 5px;
     width: 40px;
     height: 40px; }
-
-.relativ {
-  z-index: 900;
-  background-color: #413F3C; }
-
-.navigation {
-  z-index: 900;
-  position: fixed;
-  width: 100vw; }
-  .navigation-a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 5px 0;
-    height: 100%;
-    border-bottom: white solid 1px;
-    z-index: 900;
-    font-size: 0.8em;
-    text-align: center;
-    display: block;
-    width: 100%;
-    color: white;
-    text-decoration: none !important;
-    hover-color: #707AAB; }
-    .navigation-a span {
-      color: #3C4CAF; }
 
 strong {
   font-weight: 500;
@@ -74,23 +73,17 @@ body {
 .space {
   margin-top: 40px;
   margin-bottom: 40px;
-  height: 40px;
-  background-image: url("../img/arn7.png");
-  background-size: auto 100%; }
+  height: 4px; }
 
 .spacer {
   margin-top: 40px;
   margin-bottom: 40px;
-  height: 40px;
-  background-image: url("../img/arn7r.png");
-  background-size: auto 100%; }
+  height: 4px; }
 
 .spaceg {
   margin-top: 40px;
   margin-bottom: 40px;
-  height: 40px;
-  background-image: url("../img/arn7g.png");
-  background-size: auto 100%; }
+  height: 4px; }
 
 .b {
   margin-bottom: 5px !important; }
@@ -103,7 +96,8 @@ body {
   height: 100vh;
   color: white;
   background-image: url(../img/bg-header1.jpg);
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
   #header .header-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -531,9 +525,10 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    #dss3 .dss3-img div {
-      height: 51vh;
-      width: 38vh;
+    #dss3 .dss3-img img {
+      border-radius: 30px;
+      height: 43vh;
+      width: 51vh;
       background-color: #f6f2f0; }
   #dss3 .dss3-info {
     margin: 30px 0;
