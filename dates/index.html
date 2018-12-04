@@ -1,53 +1,163 @@
-<html lang="en" >
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Angular Material style sheet -->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
-</head>
-<body >
-<!--
-  Your HTML content here
--->
-<div ng-app="App" ng-controller="MainCtrl as $ctrl">
-	<mc-dates date-from='$ctrl.date1' date-to='$ctrl.date2' mc-change="$ctrl.alertDate"></mc-dates>
-	<script type="text/ng-template" id="component.html">
-		<md-input-container>&nbsp;</md-input-container>
-		<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-			&nbsp; &nbsp; с: <br/>
-			<md-datepicker ng-change="$ctrl.setFrom()" ng-model="$ctrl.inputFrom" md-placeholder="Enter date" md-max-date="$ctrl.inputTo"></md-datepicker>
-			&nbsp; &nbsp; по: <br/>
-			<md-datepicker ng-change="$ctrl.setTo()" ng-model="$ctrl.inputTo" md-placeholder="Enter date" md-min-date="$ctrl.inputFrom"></md-datepicker>
-		</section>
-		<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-			<md-button class="md-raised" ng-click="$ctrl.yesterday(1)">Вчера</md-button>
-			<md-button class="md-raised" ng-click="$ctrl.yesterday(0)">Сегодня</md-button>
-			<md-button class="md-raised" ng-click="$ctrl.yesterday(14)">2 недели</md-button>
-			<md-button class="md-raised" ng-click="$ctrl.month()">Месяц</md-button>
-			<md-button class="md-raised" ng-click="$ctrl.all()">Все</md-button>
-		</section>
-	</script>
-	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-		<md-input-container>
-			<label>Дата 1</label>
-			<input ng-model="$ctrl.date1">
-		</md-input-container>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<md-input-container>
-			<label>Дата 2</label>
-			<input ng-model="$ctrl.date2">
-		</md-input-container>
-	</section>
-</div>
-<!-- Angular Material requires Angular.js Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<!-- Angular Material Library -->
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
-
-<script src="./main.js"></script>
-
-</body>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center"> <br>
+            Прогнозирование урожайности с использованием методов машинного обучения.</h1>
+          <h3><a id="___0"></a>Описание задачи :</h3>
+<p>Найти зависимость между климатическими признаками и урожайностью разных культур. (Задача регрессии)</p>
+<h5><a id="_2"></a>Признаки:</h5>
+<ul>
+<li>Средняя, максимальная и минимальная температура за день</li>
+<li>Точка росы</li>
+<li>Уровень моря и давление</li>
+<li>Средняя и максимальая скорость ветра</li>
+<li>Осадки за день</li>
+<li>Наличие снега, града и дождя<br>
+Для каждого месяца года взято среднее среди всех дней месяца и десяти точек измерения показание.<br>
+Источник: <a href="https://www7.ncdc.noaa.gov/CDO/cdoselect.cmd?datasetabbv=GSOD&amp;countryabbv&amp;georegionabbv">Climate Data Online - Select Area</a></li>
+</ul>
+<h5><a id="__11"></a>Метод решения:</h5>
+<ol>
+<li>Нормализация данных (приведение значений к интервалу от -1 до 1) для лучшей работы математических моделей</li>
+<li>Обучение модели на части данных для каждой культуры</li>
+<li>Применение модели на оставшейся части данных</li>
+<li>Анализ применимости модели для данной культуры</li>
+<li>Выбор лучшей модели</li>
+<li>Прогноз с использованием модели</li>
+</ol>
+<h5><a id="___18"></a>Модели машинного обучения:</h5>
+<ol>
+<li>Эластичная сеть (ElasticNet)</li>
+<li>Эластичная сеть + PCA (Метод поиска главных признаков) (ElasticNet + PCA)</li>
+<li>“Kernel ridge” регрессия (а - alpha параметр регрессии) (Kernel Ridge Regression)</li>
+<li>“Kernel ridge” регрессия + PCA (Метод поиска главных признаков) (Kernel Ridge Regression + PCA)</li>
+<li>“Kernel ridge” регрессия + RBF ядро (Нелинейное преобразовние признаков для регрессии) (Kernel Ridge Regression + RBF Kernel)</li>
+<li>Регрессия деревьев решений (Decision Tree Regression)</li>
+<li>Композиция случайных деревьев решений (Random Forest Regression)</li>
+<li>Регрессия дополнительных деревьев решений (Extra Trees Regression)</li>
+</ol>
+<h5><a id="_______27"></a>Выбор моделей (выводы сделанны из графиков) :</h5>
+<ol>
+<li>Культури зернові та зернобобовi: 3</li>
+<li>Пшениця : 3</li>
+<li>Жито : 3</li>
+<li>Ячмінь : 3</li>
+<li>Овес : 3</li>
+<li>Кукурудза на зерно : 3</li>
+<li>Просо : 3</li>
+<li>Гречка : 1</li>
+<li>Рис : 3</li>
+<li>Культури зернобобові: 3</li>
+<li>Буряк цукровий фабричний : 1</li>
+<li>Соняшник: 3</li>
+<li>Ріпак і кольза: 1</li>
+<li>Соя : 1</li>
+<li>Льон-довгунець (волокно) : 3</li>
+<li>Картопля : 1</li>
+<li>Культури овочеві : 1</li>
+<li>Коренеплоди кормові : 1</li>
+<li>Кукурудза кормова : 3</li>
+<li>Трави однорічні на сіно : 1</li>
+<li>Трави багаторічні на сіно : 1</li>
+<li>Культури плодові та ягідні : 3</li>
+<li>Виноград : 3</li>
+</ol>
+<h5><a id="_51"></a>Прогноз:</h5>
+<ol>
+<li>Культури зернові та зернобобовi: 34.55</li>
+<li>Пшениця : 33.24</li>
+<li>Жито : 22.03</li>
+<li>Ячмінь : 25.18</li>
+<li>Овес : 19.80</li>
+<li>Кукурудза на зерно : 52.43</li>
+<li>Просо : 14.32</li>
+<li>Гречка : 9.77</li>
+<li>Рис : 52.48</li>
+<li>Культури зернобобові: 18.64</li>
+<li>Буряк цукровий фабричний : 386.74</li>
+<li>Соняшник: 17.40</li>
+<li>Ріпак і кольза: 22.22</li>
+<li>Соя : 19.87</li>
+<li>Льон-довгунець (волокно) : 6.57</li>
+<li>Картопля : 169.57</li>
+<li>Культури овочеві : 195.73</li>
+<li>Коренеплоди кормові : 288.31</li>
+<li>Кукурудза кормова : 193.33</li>
+<li>Трави однорічні на сіно : 37.77</li>
+<li>Трави багаторічні на сіно : 39.72</li>
+<li>Культури плодові та ягідні : 82.49</li>
+<li>Виноград : 76.14</li>
+</ol>
+<h5><a id="_75"></a>Вывод:</h5>
+<p>Для решения этой задачи больше всего подходят: Kernel ridge и ElasticNet<br>
+Методы основанные на деревьях решений не подходят в силу маленьких объемов данных<br>
+Но в некоторых случаях их предсказаия коррелируют с реальными данными.<br>
+Оценка точности: средняя<br>
+Так как набор данных небольшой, более продуктивные и точные методы машинного обучения применить сложно, так что возможно получить лишь примерную оценку</p>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+   <script type="js">
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
