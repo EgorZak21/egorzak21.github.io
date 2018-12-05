@@ -1,0 +1,467 @@
+c
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <style>
+         .chart-container {
+         position: relative;
+         margin: auto;
+         width: 100%;
+         }
+      </style>
+      <title>Анализ</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <h1 class="text-center"> <br>
+                  Прогнозирование урожайности с использованием методов машинного обучения.
+               </h1>
+               <h3><a id="___0"></a>Описание задачи :</h3>
+               <p>Найти зависимость между климатическими признаками и урожайностью разных культур. (Задача регрессии)</p>
+               <h5><a id="_2"></a>Признаки:</h5>
+               <ul>
+                  <li>Средняя, максимальная и минимальная температура за день</li>
+                  <li>Точка росы</li>
+                  <li>Уровень моря и давление</li>
+                  <li>Средняя и максимальая скорость ветра</li>
+                  <li>Осадки за день</li>
+                  <li>Наличие снега, града и дождя<br>
+                     Для каждого месяца года взято среднее среди всех дней месяца и десяти точек измерения показание.<br>
+                     Источник: <a href="https://www7.ncdc.noaa.gov/CDO/cdoselect.cmd?datasetabbv=GSOD&amp;countryabbv&amp;georegionabbv">Climate Data Online - Select Area</a>
+                  </li>
+               </ul>
+               <h5><a id="__11"></a>Метод решения:</h5>
+               <ol>
+                  <li>Нормализация данных (приведение значений к интервалу от -1 до 1) для лучшей работы математических моделей</li>
+                  <li>Обучение модели на части данных для каждой культуры</li>
+                  <li>Применение модели на оставшейся части данных</li>
+                  <li>Анализ применимости модели для данной культуры</li>
+                  <li>Выбор лучшей модели</li>
+                  <li>Прогноз с использованием модели</li>
+               </ol>
+               <h5><a id="___18"></a>Модели машинного обучения:</h5>
+               <ol>
+                  <li>Эластичная сеть (ElasticNet)</li>
+                  <li>Эластичная сеть + PCA (Метод поиска главных признаков) (ElasticNet + PCA)</li>
+                  <li>“Kernel ridge” регрессия (а - alpha параметр регрессии) (Kernel Ridge Regression)</li>
+                  <li>“Kernel ridge” регрессия + PCA (Метод поиска главных признаков) (Kernel Ridge Regression + PCA)</li>
+                  <li>“Kernel ridge” регрессия + RBF ядро (Нелинейное преобразовние признаков для регрессии) (Kernel Ridge Regression + RBF Kernel)</li>
+                  <li>Регрессия деревьев решений (Decision Tree Regression)</li>
+                  <li>Композиция случайных деревьев решений (Random Forest Regression)</li>
+                  <li>Регрессия дополнительных деревьев решений (Extra Trees Regression)</li>
+               </ol>
+               <h4><a id="_______27"></a>Выбор моделей (выводы сделанны из графиков) :</h4>
+               <p>* При клике на название кривой сверху, его можно скрывать и показывать<br></p>
+               <h4 class = "text-center">Культури зернові та зернобобовi</h4>
+               <div class="chart-container">
+                  <canvas id="chart0"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 34.55</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Пшениця :</h4>
+               <div class="chart-container">
+                  <canvas id="chart1"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 33.24</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Жито :</h4>
+               <div class="chart-container">
+                  <canvas id="chart2"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 22.03</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Ячмінь :</h4>
+               <div class="chart-container">
+                  <canvas id="chart3"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 2</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 22.01</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Овес :</h4>
+               <div class="chart-container">
+                  <canvas id="chart4"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 19.80</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Кукурудза на зерно :</h4>
+               <div class="chart-container">
+                  <canvas id="chart5"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 52.43</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Просо :</h4>
+               <div class="chart-container">
+                  <canvas id="chart6"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 14.32</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Гречка :</h4>
+               <div class="chart-container">
+                  <canvas id="chart7"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 1</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 9.77</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Рис :</h4>
+               <div class="chart-container">
+                  <canvas id="chart8"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 52.48</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Культури зернобобові:</h4>
+               <div class="chart-container">
+                  <canvas id="chart9"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 18.64</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Буряк цукровий фабричний :</h4>
+               <div class="chart-container">
+                  <canvas id="chart10"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 1</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 386.74</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Соняшник:</h4>
+               <div class="chart-container">
+                  <canvas id="chart11"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 2</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 20.37</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Ріпак і кольза:i</h4>
+               <div class="chart-container">
+                  <canvas id="chart12"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 20.72</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Соя :</h4>
+               <div class="chart-container">
+                  <canvas id="chart13"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 17.60</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Льон-довгунець (волокно) :</h4>
+               <div class="chart-container">
+                  <canvas id="chart14"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 2</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 8.38</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Картопля :</h4>
+               <div class="chart-container">
+                  <canvas id="chart15"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 151.61</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Культури овочеві :</h4>
+               <div class="chart-container">
+                  <canvas id="chart16"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 1</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 195.73</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Коренеплоди кормові :</h4>
+               <div class="chart-container">
+                  <canvas id="chart17"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 5</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 298.95</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Кукурудза кормова :</h4>
+               <div class="chart-container">
+                  <canvas id="chart18"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 193.33</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Трави однорічні на сіно :</h4>
+               <div class="chart-container">
+                  <canvas id="chart19"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 33.49</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Трави багаторічні на сіно :</h4>
+               <div class="chart-container">
+                  <canvas id="chart20"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 5</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 36.88</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Культури плодові та ягідні :</h4>
+               <div class="chart-container">
+                  <canvas id="chart21"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 82.49</h5>
+                  </div>
+               </div>
+               <p><br></p>
+               <h4 class = "text-center">Виноград :</h4>
+               <div class="chart-container">
+                  <canvas id="chart22"></canvas>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <div class = " row" >
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Выбор модели: 3</h5>
+                  </div>
+                  <div class ="col-12 col-md-6">
+                     <h5 class="text-center">Прогноз: 76.14</h5>
+                  </div>
+               </div>
+               <p>
+                  <br>
+               </p>
+               <h2><a id="_75"></a>Вывод:</h2>
+               <p>
+               <h6>Для решения этой задачи больше всего подходят: Kernel ridge (с rbf и линейныйм ядром) и ElasticNet<br>
+                  Методы основанные на деревьях решений не подходят в силу маленьких объемов данных<br>
+                  Но в некоторых случаях их предсказаия коррелируют с реальными данными.<br>
+                  Оценка точности: средняя<br>
+                  Так как набор данных небольшой, более продуктивные и точные методы машинного обучения применить сложно, так что возможно получить лишь примерную оценку.<br>
+                  Модели регрессии на данном датасете склонны занижать прогноз в половине случаев. Это может быть связанно так же с малым объемом данных и с зависимостью от предыдущего урожая, а не только от климатических признаков. 
+               </h6>
+               </p>
+               <p>
+                  <br>
+               </p>
+               <p>
+                  <br>
+               </p>
+            </div>
+            <p>
+               <br>
+            </p>
+            <p>
+               <br>
+            </p>
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
+</html>
+<script  src="js/index.js"></script>
+</body>
+</html>
