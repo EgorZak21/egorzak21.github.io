@@ -906,6 +906,8 @@ for (let i = 0; i < 23; i++) {
             ],
             datasets: datas
         },
-        options: {}
+        options: {
+            maintainAspectRatio: false
+        }
     });
 };
