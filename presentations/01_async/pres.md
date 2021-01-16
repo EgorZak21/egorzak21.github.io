@@ -22,7 +22,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 Инструкции выполняются последовательно. 
 Когда программа ожидает ответа извне, выполнение блокируется, пока ответ не будет получен.  
 
-![bg right 90%](https://egorzak21.github.io/img/slide_2.svg)
+![bg right 90%](https://egorzak21.github.io/presentations/01_async/img/slide_2.svg)
 
 ---
 
@@ -139,7 +139,7 @@ while True:
 - Результат выполнения задачи
 - Функция, которой предаётся результат после выполнения
   
-![bg right:30% 75%](https://egorzak21.github.io/img/slide_7.svg)
+![bg right:30% 75%](https://egorzak21.github.io/presentations/01_async/img/slide_7.svg)
 
 ---
 
@@ -209,7 +209,7 @@ class TaskManager:
                 self.tasks.append(task)
 ```
 
-![bg right:40% 95%](https://egorzak21.github.io/img/slide_10.svg)
+![bg right:40% 95%](https://egorzak21.github.io/presentations/01_async/img/slide_10.svg)
 
 <!-- _footer: "**Полный код в файле [03_simple_callbacks.py](https://github.com/EgorZak21/egorzak21.github.io/blob/master/presentations/01_async/code/03_simple_callbacks.py)**" -->
 
@@ -258,7 +258,7 @@ for task_name in queue:
 tm.loop()
 ```
 
-![bg right:25% 85%](https://egorzak21.github.io/img/slide_12.svg )
+![bg right:25% 85%](https://egorzak21.github.io/presentations/01_async/img/slide_12.svg)
 
 <!-- _footer: "**Полный код в файле [04_complex_callbacks.py](https://github.com/EgorZak21/egorzak21.github.io/blob/master/presentations/01_async/code/04_complex_callbacks.py)**" -->
 
@@ -295,7 +295,7 @@ tm.loop()
 
 <br> 
 
-![bg right:25% 85%](https://egorzak21.github.io/img/slide_13.svg )
+![bg right:25% 85%](https://egorzak21.github.io/presentations/01_async/img/slide_13.svg )
 
 <!-- _footer: "**Полный код в файле [05_callback_hell.py](https://github.com/EgorZak21/egorzak21.github.io/blob/master/presentations/01_async/code/05_callback_hell.py)**" -->
 
