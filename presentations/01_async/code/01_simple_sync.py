@@ -1,13 +1,14 @@
 from random import randint
 import time
 
+
 class Task:
     def __init__(self, name):
         self.completed = False
         self.response = None
         self.name = name
         self.__end = time.time() + randint(1, 5)
-    
+
     def ready(self):
         return time.time() > self.__end
 
@@ -20,6 +21,7 @@ class Task:
         while not self.ready():
             time.sleep(0.1)
         self.process()
+
 
 queue = [
     "Подготовить бумаги",
