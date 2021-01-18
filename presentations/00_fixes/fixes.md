@@ -8,10 +8,8 @@
 
 ### Правка 1:
 
-Скриншот с местом правки: 
-<kbd>
-<img src="./img/1.png" width="100%" border="1px round">
-</kbd>
+Скриншот с местом правки: <br>
+<kbd><img src="./img/1.png" width="75%" border="1px round"></kbd>
 
 <ins>Заменить блок с кодом на </ins>
 
@@ -29,8 +27,8 @@ StaticClass.bar()
 
 ### Правка 2:
 
-Скриншот с местом правки: 
-<img src="./img/2.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/2.png" width="75%" border="1px round"></kbd>
 
 <ins>Заменить блок с кодом на  </ins>
 
@@ -49,8 +47,8 @@ f.bar() # вызывать статические методы через объ
 
 ### Правка 3:
 
-Скриншот с местом правки: 
-<img src="./img/3.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/3.png" width="75%" border="1px round"></kbd>
 
 <ins>Заменить блок с кодом на</ins>
 
@@ -68,8 +66,8 @@ print(StaticClass.GET_BAR())
 
 ### Правка 4:
 
-Скриншот с местом правки: 
-<img src="./img/4.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/4.png" width="75%" border="1px round"></kbd>
 
 <ins> **Задание 2.2.4** в спойлере с ответом заменить блок с кодом на </ins>
 
@@ -95,8 +93,8 @@ print(sq1.side)
 
 ### Правка 5:
 
-Скриншот с местом правки: 
-<img src="./img/5.png" width="80%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/5.png" width="80%" border="1px round"></kbd>
 
 <ins>Беда с отступами, нужно заменить блок кода на </ins>
 
@@ -122,8 +120,8 @@ print(jane.human_age)
 
 ### Правка 6:
 
-Скриншот с местом правки: 
-<img src="./img/6.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/6.png" width="75%" border="1px round"></kbd>
 
 <ins>Беда с отступами, нужно заменить блок кода на </ins> 
 
@@ -167,8 +165,8 @@ print(jane.happiness)
 
 ### Правка 7:
 
-Скриншот с местом правки: 
-<img src="./img/9.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/9.png" width="75%" border="1px round"></kbd>
 
 <ins>Нужно заменить блок кода на  </ins>
 
@@ -186,8 +184,8 @@ print("После исключения")
 
 ### Правка 8:
 
-Скриншот с местом правки: 
-<img src="./img/7.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/7.png" width="75%" border="1px round"></kbd>
 
 <ins>Нужно заменить блок кода на</ins>
 
@@ -209,8 +207,8 @@ except ValueError:
 
 ### Правка 9:
 
-Скриншот с местом правки: 
-<img src="./img/8.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/8.png" width="75%" border="1px round"></kbd>
 
 <ins>В **Задании 2.4.7** правильным является первый ответ, а не второй.</ins>
 
@@ -232,8 +230,8 @@ except ValueError:
 
 ### Правка 12:
 
-Скриншот с местом правки: 
-<img src="./img/10.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/10.png" width="75%" border="1px round"></kbd>
 
 <ins>Весь блок кода (прямо перед Заданием 4.4.6) надо заменить на</ins>
 
@@ -293,8 +291,8 @@ while True:
 
 ### Правка 13:
 
-Скриншот с местом правки: 
-<img src="./img/11.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/11.png" width="75%" border="1px round"></kbd>
 
 <ins>В **задании 4.4.6** надо условие поменять на </ins>
 
@@ -312,8 +310,8 @@ while True:
 
 ### Правка 14:
 
-Скриншот с местом правки: 
-<img src="./img/12.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/12.png" width="75%" border="1px round"></kbd>
 
 <ins>В **задании 4.4.7** надо условие поменять на</ins> 
 
@@ -337,8 +335,8 @@ while True:
 
 ### Правка 15:
 
-Скриншот с местом правки: 
-<img src="./img/13.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/13.png" width="75%" border="1px round"></kbd>
 
 <ins>В **задании 4.4.8** надо условие поменять на </ins>
 
@@ -361,8 +359,8 @@ while True:
 
 ### Правка 16:
 
-Скриншот с местом правки: 
-<img src="./img/14.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/14.png" width="75%" border="1px round"></kbd>
 
 <ins>В **задании 4.4.9** надо условие поменять на </ins>
 
@@ -382,8 +380,8 @@ while True:
 
 ### Правка 17:
 
-Скриншот с местом правки: 
-<img src="./img/15.png" width="100%" border="1px round">
+Скриншот с местом правки: <br>
+<kbd><img src="./img/15.png" width="75%" border="1px round"></kbd>
 
 <ins>В **задании 4.4.10** надо условие поменять на </ins>
 
