@@ -1,8 +1,12 @@
-from extensions import Convertor
-import traceback
+import requests
+import json
 
-try:
-    msg = Convertor.get_price('рубль','до1ллар', 123)
-    print(msg)
-except Exception as e:
-    traceback.print_tb(e.__traceback__)
+base_key = "USD"
+sym_key = "RUB"
+amount = 100
+
+r = requests.get(f"https://api.exchangeratesapi.io/latest?base={base_key}&symbols={sym_key}")
+resp = json.loads(r.content)
+new_price = resp['rates'][sym_key] * amount
+
+print(new_price)
